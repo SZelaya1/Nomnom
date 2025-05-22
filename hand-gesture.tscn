@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://jwrhnq2glm0i"]
+
+[ext_resource type="Script" uid="uid://b2rl0mm4o18k4" path="res://Scripts/hand_gesture.gd" id="1_ldpp1"]
+[ext_resource type="Texture2D" uid="uid://bemd4qq1kfawd" path="res://Assets/HandGestures/One_Hand.png" id="1_rwwqq"]
+[ext_resource type="Texture2D" uid="uid://tst3fcv0yyvi" path="res://Assets/HandGestures/Three_Hand.png" id="2_ldpp1"]
+
+[node name="HandGestureScene" type="Node2D"]
+script = ExtResource("1_ldpp1")
+
+[node name="LeftHand" type="Sprite2D" parent="."]
+position = Vector2(259, 258)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_rwwqq")
+
+[node name="RightHand" type="Sprite2D" parent="."]
+position = Vector2(896, 256)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_ldpp1")
