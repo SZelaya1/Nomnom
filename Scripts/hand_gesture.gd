@@ -1,11 +1,14 @@
 extends Node2D
 
+var rightAnswer = 0 # Global variable to store the correct answer
+
 # Function to get a random rumber between 1 to 5
 func _randomNumber():
 	var random = 1 + randi() % 5
 	print(random)
 	return random
 
+# Function to load hand gesture images based on the side (right or left)
 func _loadGestureImage(random, isLeft):
 	var handTexture : Texture2D
 	match random:
@@ -26,13 +29,21 @@ func _loadGestureImage(random, isLeft):
 	else:
 		$RightHand.texture = handTexture
 		$RightHand.scale.x = -1
-			
+		
 
+# This function will get the cliked Sprite value and compare it with the answer of the player	
+func _on_button_pressed(clickedNumber):
+	if (rightAnswer == clickedNumber) :
+		print("So smart")
+	else:
+		print("Dumb")
+	
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_loadGestureImage(_randomNumber(), true)
-	_loadGestureImage(_randomNumber(), false)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	var random1 = _randomNumber()
+	var random2 = _randomNumber()
+	_loadGestureImage(random1, true)
+	_loadGestureImage(random2, false)
+	
+	rightAnswer = random1 + random2
