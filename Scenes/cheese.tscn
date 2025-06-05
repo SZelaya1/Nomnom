@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://jopy6vykvuc3"]
+[gd_scene load_steps=4 format=3 uid="uid://dblsojf1ow4xs"]
 
-[ext_resource type="Script" uid="uid://cka4kgcmb7moy" path="res://Scripts/cheese.gd" id="1_46kgj"]
+[ext_resource type="Script" path="res://Scripts/cheese.gd" id="1_46kgj"]
 [ext_resource type="Texture2D" uid="uid://kkjgsdoy74j8" path="res://Image/CheeseSlides.png" id="2_46kgj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0dev"]
