@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://omciduk2evbh"]
 
 [ext_resource type="Texture2D" uid="uid://bpqakxnrxy0cg" path="res://Assets/Backgrounds/PicnicBackground.jpg" id="2_pmvfc"]
-[ext_resource type="PackedScene" uid="uid://b07k87rbxsl08" path="res://monster.tscn" id="3_0mofs"]
-[ext_resource type="PackedScene" uid="uid://dpemvhf3qggfy" path="res://sandwich.tscn" id="4_7nnng"]
+[ext_resource type="PackedScene" uid="uid://b07k87rbxsl08" path="res://Scenes/monster.tscn" id="3_0mofs"]
+[ext_resource type="PackedScene" uid="uid://dpemvhf3qggfy" path="res://Scenes/sandwich.tscn" id="4_7nnng"]
 [ext_resource type="Texture2D" uid="uid://doj4fv6wfnrff" path="res://Image/Speech_Bubble.png" id="4_ib4rg"]
 
 [node name="NomnomFeedingScene" type="Node2D"]
