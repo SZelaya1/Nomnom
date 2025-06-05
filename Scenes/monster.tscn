@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b07k87rbxsl08"]
 
-[ext_resource type="Script" uid="uid://vrevkymj1opg" path="res://monster.gd" id="1_mrqeg"]
+[ext_resource type="Script" uid="uid://vrevkymj1opg" path="res://Scripts/monster.gd" id="1_mrqeg"]
 [ext_resource type="Texture2D" uid="uid://ddl0g0vqmumtc" path="res://Assets/Monsters/Nomnom.png" id="1_s3gyj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mrqeg"]
