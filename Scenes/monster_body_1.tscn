@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dyaeaxcrcjpjf" path="res://Assets/Monsters/Arms/arm_whiteE.png" id="2_fbgo7"]
 [ext_resource type="Texture2D" uid="uid://xw07wl2khasm" path="res://Assets/Monsters/Legs/leg_whiteC.png" id="3_elwuv"]
 [ext_resource type="Texture2D" uid="uid://bl8hmvydtm4mo" path="res://Assets/Monsters/Horns/detail_white_horn_large.png" id="4_5c6f8"]
-[ext_resource type="Texture2D" uid="uid://xtmcnnp5ja87" path="res://Assets/Monsters/Eyes/eye_cute_dark.png" id="5_pkx6l"]
+[ext_resource type="Texture2D" uid="uid://bc8oj2jvfl4cr" path="res://Assets/Monsters/Eyes/eye_cute_light.png" id="5_lcma1"]
 [ext_resource type="Texture2D" uid="uid://curs0wi2l8a65" path="res://Assets/Monsters/Eyes/eye_closed_happy.png" id="6_rtlh7"]
 [ext_resource type="Texture2D" uid="uid://diii1oh08ws4i" path="res://Assets/Monsters/Eyes/eye_human_green.png" id="7_d7w13"]
 [ext_resource type="Texture2D" uid="uid://4o4w3opfrnrr" path="res://Assets/Monsters/Mouth/mouth_closed_happy.png" id="8_si4cb"]
@@ -17,7 +17,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_pkx6l")
+"texture": ExtResource("5_lcma1")
 }],
 "loop": false,
 "name": &"begging",
@@ -94,8 +94,8 @@ animations = [{
 
 [node name="MonsterBody" type="Sprite2D" parent="."]
 modulate = Color(0.635294, 0.396078, 1, 1)
-position = Vector2(641.6, 361.6)
-scale = Vector2(0.8, 0.8)
+position = Vector2(639.8, 420.8)
+scale = Vector2(0.65, 0.65)
 texture = ExtResource("1_lcma1")
 
 [node name="MonsterLeftArm" type="Sprite2D" parent="MonsterBody"]
@@ -136,27 +136,26 @@ texture = ExtResource("4_5c6f8")
 [node name="Eyes" type="Node2D" parent="."]
 
 [node name="MonsterEye1" type="AnimatedSprite2D" parent="Eyes"]
-position = Vector2(641.6, 313.6)
-scale = Vector2(0.8, 0.8)
+position = Vector2(636.6, 384.05)
+scale = Vector2(0.65, 0.65)
 sprite_frames = SubResource("SpriteFrames_kmdd3")
-animation = &"idle"
-frame_progress = 0.226141
+animation = &"begging"
 
 [node name="MonsterEye2" type="AnimatedSprite2D" parent="Eyes"]
-position = Vector2(721.6, 369.6)
-scale = Vector2(0.5, 0.5)
+position = Vector2(702.2, 435.2)
+scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_kmdd3")
 animation = &"idle"
 
 [node name="MonsterEye3" type="AnimatedSprite2D" parent="Eyes"]
-position = Vector2(561.6, 369.6)
-scale = Vector2(0.5, 0.5)
+position = Vector2(574.2, 435.2)
+scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_kmdd3")
 animation = &"idle"
 
 [node name="MonsterMouth" type="AnimatedSprite2D" parent="."]
-position = Vector2(641.6, 433.6)
-scale = Vector2(0.8, 0.8)
+position = Vector2(639.8, 492.8)
+scale = Vector2(0.65, 0.65)
 sprite_frames = SubResource("SpriteFrames_bcu8g")
 animation = &"sad"
 autoplay = "sad"

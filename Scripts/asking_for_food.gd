@@ -1,16 +1,15 @@
 extends Node2D
 
 # Saving some components from the scene to variables
-@onready var monster = $MonsterBody1
+@onready var monster = $MonsterBody3
 @onready var dreaming_bubble = $DreamingBubble
 @onready var dialog_bubble = $DialogBubble
 
 # Saving the monster's mouth
-@onready var monster_mouth = $MonsterBody1/MonsterMouth
+@onready var monster_mouth = $MonsterBody3/MonsterMouth
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_monster_color()
 	_switch_to_talking()
 
 func _switch_to_talking():
@@ -39,18 +38,6 @@ func get_eyes(monster: Node) -> Array:
 	if eyes_node: # If we find one
 		return eyes_node.get_children().filter(func(n): return n is AnimatedSprite2D) # Get all the children from it and only keep the AnimatedSprite2D
 	return []
-
-# To have random colors of a monster
-func _monster_color():
-	var palette = [
-	Color(1.0, 0.2, 0.2),  # red-ish
-	Color(0.2, 1.0, 0.2),  # green-ish
-	Color(0.2, 0.6, 1.0),  # blue-ish
-	Color(1.0, 1.0, 0.4),  # yellow
-	Color(0.8, 0.4, 1.0),  # purple
-]
-	var random_color = palette.pick_random()
-	$MonsterBody1/MonsterBody.modulate = random_color
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
