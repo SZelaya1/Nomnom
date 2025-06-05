@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://jwrhnq2glm0i"]
+[gd_scene load_steps=25 format=3 uid="uid://bcydpj0tbcue1"]
 
 [ext_resource type="Script" uid="uid://b2rl0mm4o18k4" path="res://Scripts/hand_gesture.gd" id="1_ldpp1"]
+<<<<<<< HEAD:hand-gesture.tscn
 [ext_resource type="Texture2D" uid="uid://coj12iciei7l6" path="res://Assets/HandGestures/One_Hand.png" id="1_rwwqq"]
 [ext_resource type="Texture2D" uid="uid://bb2kspli54h08" path="res://Assets/HandGestures/Three_Hand.png" id="2_ldpp1"]
 [ext_resource type="Texture2D" uid="uid://e6u10yqqdvhc" path="res://Assets/DT - Background.png" id="2_xlvun"]
@@ -24,6 +25,31 @@
 [ext_resource type="Script" uid="uid://dlttxvvgtbgcp" path="res://nine.gd" id="22_xn6cv"]
 [ext_resource type="Texture2D" uid="uid://tixdsxjdmkfc" path="res://Assets/NumberButtons/zehn.svg" id="23_l8dve"]
 [ext_resource type="Script" uid="uid://dsq88bdqxelt0" path="res://ten.gd" id="24_o4asw"]
+=======
+[ext_resource type="Texture2D" uid="uid://bemd4qq1kfawd" path="res://Assets/HandGestures/One_Hand.png" id="1_rwwqq"]
+[ext_resource type="Texture2D" path="res://Assets/Background.jpg" id="2_2ynpi"]
+[ext_resource type="Texture2D" uid="uid://tst3fcv0yyvi" path="res://Assets/HandGestures/Three_Hand.png" id="2_ldpp1"]
+[ext_resource type="Texture2D" uid="uid://371ugy2ayml8" path="res://Assets/NumberButtons/einer.png" id="5_0bs6d"]
+[ext_resource type="Texture2D" uid="uid://cc0hdlqltmis5" path="res://Assets/NumberButtons/zwei.png" id="6_gfp6j"]
+[ext_resource type="Script" path="res://one.gd" id="6_yt0gq"]
+[ext_resource type="Texture2D" uid="uid://dmnwt4b17lftk" path="res://Assets/NumberButtons/drei.png" id="7_yt0gq"]
+[ext_resource type="Texture2D" uid="uid://bmys7utbr4jfi" path="res://Assets/NumberButtons/vier.png" id="8_hw6yd"]
+[ext_resource type="Script" path="res://two.gd" id="8_xlvun"]
+[ext_resource type="Texture2D" uid="uid://bxp8oqmu01sr8" path="res://Assets/NumberButtons/funf.png" id="9_y14u1"]
+[ext_resource type="Script" path="res://three.gd" id="10_ecv7b"]
+[ext_resource type="Texture2D" uid="uid://puply5lsm6nq" path="res://Assets/NumberButtons/sechs.png" id="10_rjaib"]
+[ext_resource type="Texture2D" uid="uid://ck3sluw0rfo3q" path="res://Assets/NumberButtons/sieben.png" id="11_scj4r"]
+[ext_resource type="Texture2D" uid="uid://p3f5vqy6xh36" path="res://Assets/NumberButtons/acht.png" id="12_hkdaj"]
+[ext_resource type="Script" path="res://four.gd" id="12_l8dve"]
+[ext_resource type="Texture2D" uid="uid://bg4qmxbvfst4c" path="res://Assets/NumberButtons/neun.png" id="13_1mard"]
+[ext_resource type="Script" path="res://five.gd" id="14_7upnk"]
+[ext_resource type="Texture2D" uid="uid://bbxn1ntnp856v" path="res://Assets/NumberButtons/zehn.png" id="14_j40oe"]
+[ext_resource type="Script" path="res://six.gd" id="16_svndl"]
+[ext_resource type="Script" path="res://seven.gd" id="18_t3pt1"]
+[ext_resource type="Script" path="res://eight.gd" id="20_x1f5h"]
+[ext_resource type="Script" path="res://nine.gd" id="22_xn6cv"]
+[ext_resource type="Script" path="res://ten.gd" id="24_o4asw"]
+>>>>>>> 70325335ab56be793e1a830971a58a4d1f01086e:Scenes/hand-gesture.tscn
 
 [node name="HandGestureScene" type="Node2D"]
 script = ExtResource("1_ldpp1")
