@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://2n61ul12sveq"]
 
-[ext_resource type="Script" uid="uid://ocrl123aymu8" path="res://Scripts/asking_for_food.gd" id="1_5nnaq"]
+[ext_resource type="Script" path="res://Scripts/asking_for_food.gd" id="1_5nnaq"]
 [ext_resource type="Texture2D" uid="uid://rrfqhqq7547i" path="res://Assets/Backgrounds/PicnicBackground.png" id="1_6svtm"]
 [ext_resource type="PackedScene" uid="uid://qr8xfsu74nyv" path="res://Scenes/monster_body_1.tscn" id="2_vatly"]
 [ext_resource type="Texture2D" uid="uid://lqw202figqcf" path="res://Assets/Various/DreamingBubble.png" id="3_5d2v2"]

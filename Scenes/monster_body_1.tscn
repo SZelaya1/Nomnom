@@ -102,7 +102,6 @@ texture = ExtResource("1_lcma1")
 z_index = -6
 position = Vector2(210, 120)
 rotation = -0.244346
-scale = Vector2(1, 1)
 texture = ExtResource("2_fbgo7")
 
 [node name="MonsterRightArm" type="Sprite2D" parent="MonsterBody"]
@@ -115,7 +114,6 @@ texture = ExtResource("2_fbgo7")
 [node name="MonsterLeftLeg" type="Sprite2D" parent="MonsterBody"]
 z_index = -6
 position = Vector2(110, 240)
-scale = Vector2(1, 1)
 texture = ExtResource("3_elwuv")
 
 [node name="MonsterRightLeg" type="Sprite2D" parent="MonsterBody"]
@@ -127,7 +125,6 @@ texture = ExtResource("3_elwuv")
 
 [node name="MonsterLeftTop" type="Sprite2D" parent="MonsterBody"]
 position = Vector2(120, -128.75)
-scale = Vector2(1, 1)
 texture = ExtResource("4_5c6f8")
 
 [node name="MonsterRightTop" type="Sprite2D" parent="MonsterBody"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dcjj26ki4rno3"]
+[gd_scene load_steps=8 format=3 uid="uid://dft4ls6o6iuls"]
 
 [ext_resource type="Texture2D" uid="uid://d1o10d4etfotw" path="res://Image/Menu.png" id="1_l48gv"]
 [ext_resource type="Texture2D" uid="uid://c4ehxdjv2ovsi" path="res://Image/Sandwich_1.png" id="2_ecwwl"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://5x6m1nx5i1te" path="res://Image/Lettuce_1.png" id="6_h1wq0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l48gv"]
-load_path = "res://.godot/imported/Menu_Background.png-7ae0252128720905635309d7d4aada53.ctex"
 
 [node name="Menu" type="Node2D"]
 
