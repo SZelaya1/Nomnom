@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://371ugy2ayml8" path="res://Assets/NumberButtons/einer.png" id="5_0bs6d"]
 [ext_resource type="Texture2D" uid="uid://cc0hdlqltmis5" path="res://Assets/NumberButtons/zwei.png" id="6_gfp6j"]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 64baf8d7ef56de5f815ccd71af2636115c3763b1
 [ext_resource type="Script" uid="uid://dph1dseuud4wr" path="res://Scripts/one.gd" id="6_yt0gq"]
 [ext_resource type="Texture2D" uid="uid://dmnwt4b17lftk" path="res://Assets/NumberButtons/drei.png" id="7_yt0gq"]
 [ext_resource type="Texture2D" uid="uid://bmys7utbr4jfi" path="res://Assets/NumberButtons/vier.png" id="8_hw6yd"]
@@ -25,6 +28,7 @@
 [ext_resource type="Script" uid="uid://biyrq01v87hq" path="res://Scripts/eight.gd" id="20_x1f5h"]
 [ext_resource type="Script" uid="uid://dlttxvvgtbgcp" path="res://Scripts/nine.gd" id="22_xn6cv"]
 [ext_resource type="Script" uid="uid://dsq88bdqxelt0" path="res://Scripts/ten.gd" id="24_o4asw"]
+<<<<<<< HEAD
 =======
 [ext_resource type="Script" path="res://one.gd" id="6_yt0gq"]
 [ext_resource type="Texture2D" uid="uid://dmnwt4b17lftk" path="res://Assets/NumberButtons/drei.png" id="7_yt0gq"]
@@ -45,6 +49,8 @@
 [ext_resource type="Script" path="res://nine.gd" id="22_xn6cv"]
 [ext_resource type="Script" path="res://ten.gd" id="24_o4asw"]
 >>>>>>> origin/asking-monster
+=======
+>>>>>>> 64baf8d7ef56de5f815ccd71af2636115c3763b1
 
 [node name="HandGestureScene" type="Node2D"]
 script = ExtResource("1_ldpp1")
