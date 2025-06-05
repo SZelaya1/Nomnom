@@ -34,9 +34,9 @@ func _loadGestureImage(random, isLeft):
 # This function will get the cliked Sprite value and compare it with the answer of the player	
 func _on_button_pressed(clickedNumber):
 	if (rightAnswer == clickedNumber) :
-		print("So smart")
+		print("Correct answer")
 	else:
-		print("Dumb")
+		print("Wrong answer")
 	
 	
 # Called when the node enters the scene tree for the first time.
