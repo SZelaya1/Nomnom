@@ -13,12 +13,12 @@ config_version=5
 config/name="NomNom"
 run/main_scene="uid://jwrhnq2glm0i"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://1k8ixhv30nxw"
 
 [display]
 
-window/size/viewport_width=1724
-window/size/viewport_height=964
+window/size/viewport_width=1280
+window/size/viewport_height=800
 
 [input]
 
