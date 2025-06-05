@@ -39,11 +39,6 @@ func get_eyes(monster: Node) -> Array:
 		return eyes_node.get_children().filter(func(n): return n is AnimatedSprite2D) # Get all the children from it and only keep the AnimatedSprite2D
 	return []
 
-<<<<<<< HEAD
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-=======
 # To have random colors of a monster
 func _monster_color():
 	var palette = [
@@ -58,6 +53,4 @@ func _monster_color():
 
 func _on_button_pressed() -> void:
 		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-
-	 
->>>>>>> 093fe3d8c2a3f85ebf61d581ac8794aa16705833
+		
