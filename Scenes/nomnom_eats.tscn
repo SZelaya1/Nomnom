@@ -8,10 +8,10 @@
 [node name="NomnomFeedingScene" type="Node2D"]
 
 [node name="Background" type="TextureRect" parent="."]
-offset_left = 1.0
-offset_top = 7.0
-offset_right = 1196.0
-offset_bottom = 800.0
+offset_left = 44.0
+offset_top = 5.0
+offset_right = 1239.0
+offset_bottom = 798.0
 texture = ExtResource("2_pmvfc")
 expand_mode = 1
 stretch_mode = 4
