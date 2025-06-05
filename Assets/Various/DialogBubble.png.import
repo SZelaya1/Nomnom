@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgxsw0i0665x8"
-path="res://.godot/imported/Background.jpg-e53c948bbfe9996c99cd309802213d2d.ctex"
+uid="uid://b0fc3343vvs10"
+path="res://.godot/imported/DialogBubble.png-0bc95c0d32b012cb385dd63c614de28f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background.jpg"
-dest_files=["res://.godot/imported/Background.jpg-e53c948bbfe9996c99cd309802213d2d.ctex"]
+source_file="res://Assets/Various/DialogBubble.png"
+dest_files=["res://.godot/imported/DialogBubble.png-0bc95c0d32b012cb385dd63c614de28f.ctex"]
 
 [params]
 

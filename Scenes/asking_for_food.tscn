@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=3 uid="uid://2n61ul12sveq"]
+
+[ext_resource type="Script" uid="uid://ocrl123aymu8" path="res://Scripts/asking_for_food.gd" id="1_5nnaq"]
+[ext_resource type="Texture2D" uid="uid://rrfqhqq7547i" path="res://Assets/Backgrounds/PicnicBackground.png" id="1_6svtm"]
+[ext_resource type="PackedScene" uid="uid://qr8xfsu74nyv" path="res://Scenes/monster_body_1.tscn" id="2_vatly"]
+[ext_resource type="Texture2D" uid="uid://lqw202figqcf" path="res://Assets/Various/DreamingBubble.png" id="3_5d2v2"]
+[ext_resource type="Texture2D" uid="uid://b0fc3343vvs10" path="res://Assets/Various/DialogBubble.png" id="5_0kodg"]
+[ext_resource type="Texture2D" uid="uid://c4ehxdjv2ovsi" path="res://Image/Sandwich_1.png" id="6_j4020"]
+[ext_resource type="AudioStream" uid="uid://c5evxydy7fg5k" path="res://Assets/Audios/SpeakingMonster.mp3" id="7_5nnaq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d2v2"]
+atlas = ExtResource("3_5d2v2")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nnaq"]
+atlas = ExtResource("3_5d2v2")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kodg"]
+atlas = ExtResource("3_5d2v2")
+region = Rect2(0, 512, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4020"]
+atlas = ExtResource("3_5d2v2")
+region = Rect2(512, 512, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yl0v3"]
+animations = [{
+"frames": [{
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_5d2v2")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_5nnaq")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_0kodg")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_j4020")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="asking-for-food" type="Node2D"]
+script = ExtResource("1_5nnaq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -10
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_6svtm")
+
+[node name="MonsterBody1" parent="." instance=ExtResource("2_vatly")]
+position = Vector2(8, 56)
+
+[node name="DialogBubble" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 184)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5_0kodg")
+
+[node name="Sandwich" type="Sprite2D" parent="DialogBubble"]
+position = Vector2(9.53674e-06, -20)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_j4020")
+
+[node name="DreamingBubble" type="AnimatedSprite2D" parent="."]
+position = Vector2(992, 192)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_yl0v3")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0
+speed_scale = 0.65
+
+[node name="TalkingAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_5nnaq")
