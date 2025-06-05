@@ -1,8 +1,13 @@
 [gd_scene load_steps=15 format=3 uid="uid://2n61ul12sveq"]
 
 [ext_resource type="Script" uid="uid://ocrl123aymu8" path="res://Scripts/asking_for_food.gd" id="1_5nnaq"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bpqakxnrxy0cg" path="res://Assets/Backgrounds/PicnicBackground.jpg" id="2_5nnaq"]
 [ext_resource type="PackedScene" uid="uid://qr8xfsu74nyv" path="res://Scenes/monster_body_1.tscn" id="2_vatly"]
+=======
+[ext_resource type="Texture2D" uid="uid://rrfqhqq7547i" path="res://Assets/Backgrounds/PicnicBackground.png" id="1_6svtm"]
+[ext_resource type="PackedScene" uid="uid://qr8xfsu74nyv" path="res://Scenes/nomnom_asks.tscn" id="2_vatly"]
+>>>>>>> 093fe3d8c2a3f85ebf61d581ac8794aa16705833
 [ext_resource type="Texture2D" uid="uid://lqw202figqcf" path="res://Assets/Various/DreamingBubble.png" id="3_5d2v2"]
 [ext_resource type="PackedScene" uid="uid://cjo1v785du4ks" path="res://Scenes/monster_body_2.tscn" id="4_0kodg"]
 [ext_resource type="Texture2D" uid="uid://b0fc3343vvs10" path="res://Assets/Various/DialogBubble.png" id="5_0kodg"]
@@ -87,3 +92,12 @@ speed_scale = 0.65
 
 [node name="TalkingAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_5nnaq")
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 956.0
+offset_top = 625.0
+offset_right = 1239.0
+offset_bottom = 750.0
+text = "Next"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_button_pressed"]
