@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgrrx5e6q483p"]
+
+[ext_resource type="Script" uid="uid://bwlyhwpnfjkvf" path="res://Scripts/tomatoes.gd" id="1_yj3fh"]
+[ext_resource type="Texture2D" uid="uid://cde2te54uts7g" path="res://Image/Tomate_1.png" id="2_yj3fh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0dev"]
+size = Vector2(432, 408)
+
+[node name="TomatoesScene" type="Node2D"]
+script = ExtResource("1_yj3fh")
+
+[node name="Tomatoes2" type="Sprite2D" parent="."]
+position = Vector2(224, 208)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_yj3fh")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -3.05176e-05)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(223, 214)
+shape = SubResource("RectangleShape2D_p0dev")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

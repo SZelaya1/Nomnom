@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b5p0goxvdgco0"]
+[gd_scene load_steps=15 format=3 uid="uid://nfv4ip16i0j3"]
 
 [ext_resource type="Texture2D" uid="uid://cd4ww101b125e" path="res://Assets/Monsters/Body/body_whiteB.png" id="1_lcma1"]
 [ext_resource type="Texture2D" uid="uid://dyaeaxcrcjpjf" path="res://Assets/Monsters/Arms/arm_whiteE.png" id="2_fbgo7"]

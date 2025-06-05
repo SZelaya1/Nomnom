@@ -1,0 +1,171 @@
+[gd_scene load_steps=15 format=3 uid="uid://cvsdi7xuge6yi"]
+
+[ext_resource type="Script" uid="uid://7b8gapqb0eyc" path="res://Scripts/cooking.gd" id="1_3ucsr"]
+[ext_resource type="Texture2D" uid="uid://db8w2vrxdxlx2" path="res://Assets/Backgrounds/KitchenBackground.jpg" id="1_mihmv"]
+[ext_resource type="PackedScene" uid="uid://cw7urlb7ynrdp" path="res://Scenes/basket.tscn" id="2_jba1e"]
+[ext_resource type="Texture2D" uid="uid://byt5ne3jiimps" path="res://Image/Plate.png" id="3_sxt81"]
+[ext_resource type="Texture2D" uid="uid://dpulcwjouagh2" path="res://Image/BreadLoaf.png" id="4_atedy"]
+[ext_resource type="Texture2D" uid="uid://cdkeoeec325cj" path="res://Image/Toast_2.png" id="5_3ucsr"]
+[ext_resource type="PackedScene" uid="uid://c86c31vii2j6g" path="res://Scenes/toast.tscn" id="5_jba1e"]
+[ext_resource type="Texture2D" uid="uid://uvctji8xtcmy" path="res://Image/Cheese.png" id="6_s8y7v"]
+[ext_resource type="PackedScene" uid="uid://jopy6vykvuc3" path="res://Scenes/cheese.tscn" id="8_3ucsr"]
+[ext_resource type="Texture2D" uid="uid://5x6m1nx5i1te" path="res://Image/Lettuce_1.png" id="8_ynlyi"]
+[ext_resource type="PackedScene" uid="uid://b3mpfwm1p5prw" path="res://Scenes/lettuce.tscn" id="10_3ucsr"]
+[ext_resource type="Texture2D" uid="uid://cuasl7lev7f84" path="res://Image/Tomato.png" id="10_tyq45"]
+[ext_resource type="PackedScene" uid="uid://dgrrx5e6q483p" path="res://Scenes/tomatoes.tscn" id="12_3ucsr"]
+[ext_resource type="Texture2D" uid="uid://cxarjn4rb8ttk" path="res://Assets/Various/Square.png" id="12_atedy"]
+
+[node name="Cooking" type="Node2D"]
+script = ExtResource("1_3ucsr")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -6
+offset_left = 8.0
+offset_right = 1280.0
+offset_bottom = 800.0
+texture = ExtResource("1_mihmv")
+expand_mode = 1
+
+[node name="BasketScene" parent="." instance=ExtResource("2_jba1e")]
+position = Vector2(856, 464)
+scale = Vector2(0.25, 0.25)
+
+[node name="Plate3" type="Sprite2D" parent="."]
+position = Vector2(705.2, 645.7)
+scale = Vector2(0.409375, 0.368359)
+texture = ExtResource("3_sxt81")
+
+[node name="Toast1" type="Sprite2D" parent="Plate3"]
+position = Vector2(-29.313, -134.38)
+rotation = 3.14159
+scale = Vector2(0.641221, -0.712619)
+texture = ExtResource("4_atedy")
+
+[node name="Toast2" parent="." instance=ExtResource("5_jba1e")]
+position = Vector2(688, 552)
+rotation = 0.120428
+scale = Vector2(0.25, 0.25)
+
+[node name="Plate4" type="Sprite2D" parent="."]
+position = Vector2(864, 672)
+scale = Vector2(0.36, 0.324)
+texture = ExtResource("3_sxt81")
+
+[node name="Cheese1" type="Sprite2D" parent="Plate4"]
+position = Vector2(-58.626, -108.59)
+scale = Vector2(0.45, 0.45)
+skew = -0.174533
+texture = ExtResource("6_s8y7v")
+
+[node name="Cheese2" parent="." instance=ExtResource("8_3ucsr")]
+position = Vector2(840, 608)
+scale = Vector2(0.25, 0.25)
+
+[node name="Plate1" type="Sprite2D" parent="."]
+position = Vector2(400, 624)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_sxt81")
+
+[node name="Lettuce1" type="Sprite2D" parent="Plate1"]
+position = Vector2(-88.8889, -124.444)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("8_ynlyi")
+
+[node name="Lettuce2" parent="." instance=ExtResource("10_3ucsr")]
+position = Vector2(432, 496)
+rotation = 0.958186
+scale = Vector2(0.35, 0.35)
+
+[node name="Plate2" type="Sprite2D" parent="."]
+position = Vector2(542, 666)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_sxt81")
+
+[node name="Tomatoes1" type="Sprite2D" parent="Plate2"]
+position = Vector2(-55.4285, -132.572)
+scale = Vector2(0.642857, 0.642857)
+texture = ExtResource("10_tyq45")
+
+[node name="Tomatoes2" parent="." instance=ExtResource("12_3ucsr")]
+position = Vector2(568, 592)
+rotation = 0.958186
+scale = Vector2(0.19, 0.19)
+
+[node name="Square" type="Sprite2D" parent="."]
+position = Vector2(32, 178)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("12_atedy")
+
+[node name="ToastMenu" type="Sprite2D" parent="Square"]
+position = Vector2(32.9412, -150.588)
+scale = Vector2(0.176471, 0.176471)
+texture = ExtResource("5_3ucsr")
+
+[node name="CheeseMenu" type="Sprite2D" parent="Square"]
+position = Vector2(32.9412, -44.7059)
+scale = Vector2(0.176471, 0.176471)
+texture = ExtResource("6_s8y7v")
+
+[node name="TomatoMenu" type="Sprite2D" parent="Square"]
+position = Vector2(32.9412, 61.1765)
+scale = Vector2(0.22, 0.22)
+texture = ExtResource("10_tyq45")
+
+[node name="LettuceMenu" type="Sprite2D" parent="Square"]
+position = Vector2(32.9412, 167.059)
+scale = Vector2(0.176471, 0.176471)
+texture = ExtResource("8_ynlyi")
+
+[node name="ToastLabel" type="Label" parent="Square"]
+offset_left = 103.471
+offset_top = -195.353
+offset_right = 169.471
+offset_bottom = -105.353
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheeseLabel" type="Label" parent="Square"]
+offset_left = 103.529
+offset_top = -89.4118
+offset_right = 169.529
+offset_bottom = 0.588242
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TomatoesLabel" type="Label" parent="Square"]
+offset_left = 103.529
+offset_top = 16.4706
+offset_right = 169.529
+offset_bottom = 106.471
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LettuceLabel" type="Label" parent="Square"]
+offset_left = 103.529
+offset_top = 122.353
+offset_right = 169.529
+offset_bottom = 212.353
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="."]
+visible = false
+offset_left = 944.0
+offset_top = 640.0
+offset_right = 1256.0
+offset_bottom = 776.0
+text = "Next"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
