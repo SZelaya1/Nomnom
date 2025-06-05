@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coj12iciei7l6"
-path="res://.godot/imported/One_Hand.png-605a194336aa20e6755fc20fb7a42f17.ctex"
+uid="uid://cdqus3ps2yfo1"
+path="res://.godot/imported/Zero_Hand.png-400f17bec97418a5a6088c2db1184911.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/HandGestures/One_Hand.png"
-dest_files=["res://.godot/imported/One_Hand.png-605a194336aa20e6755fc20fb7a42f17.ctex"]
+source_file="res://Assets/HandGestures/Zero_Hand.png"
+dest_files=["res://.godot/imported/Zero_Hand.png-400f17bec97418a5a6088c2db1184911.ctex"]
 
 [params]
 

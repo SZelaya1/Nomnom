@@ -25,10 +25,10 @@ func _loadGestureImage(random, isLeft):
 	
 	if (isLeft):
 		$LeftHand.texture = handTexture
-		$LeftHand.scale.x = 1
+		$LeftHand.scale.x = 0.34
 	else:
 		$RightHand.texture = handTexture
-		$RightHand.scale.x = -1
+		$RightHand.scale.x = -0.34
 		
 
 # This function will get the cliked Sprite value and compare it with the answer of the player	

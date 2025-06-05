@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coj12iciei7l6"
-path="res://.godot/imported/One_Hand.png-605a194336aa20e6755fc20fb7a42f17.ctex"
+uid="uid://ckfmk2b40apcd"
+path="res://.godot/imported/sieben.svg-8eb04b3e89b8289c669af90ddfe0fdee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/HandGestures/One_Hand.png"
-dest_files=["res://.godot/imported/One_Hand.png-605a194336aa20e6755fc20fb7a42f17.ctex"]
+source_file="res://Assets/NumberButtons/sieben.svg"
+dest_files=["res://.godot/imported/sieben.svg-8eb04b3e89b8289c669af90ddfe0fdee.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

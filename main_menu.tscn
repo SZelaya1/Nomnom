@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqe5p2lxv74xh"]
+
+[ext_resource type="Script" uid="uid://bi2f7q0oy2kov" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_06t4h")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Hand_gesture" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 485.0
+offset_right = 510.0
+offset_bottom = 604.0
+text = "Play HG Game"
+
+[node name="Nom_nom" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 757.0
+offset_top = 487.0
+offset_right = 1049.0
+offset_bottom = 604.0
+text = "Nom Nom Game"
+
+[node name="Quit" type="Button" parent="Button_manager"]
+layout_mode = 0
+offset_left = 1153.0
+offset_top = 36.0
+offset_right = 1240.0
+offset_bottom = 111.0
+text = "X"
+
+[connection signal="pressed" from="Button_manager/Hand_gesture" to="." method="_on_hand_gesture_pressed"]
+[connection signal="pressed" from="Button_manager/Nom_nom" to="." method="_on_nom_nom_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
