@@ -1,16 +1,15 @@
 extends Node2D
 
 # Saving some components from the scene to variables
-@onready var monster = $MonsterBody1
+@onready var monster = $MonsterBody3
 @onready var dreaming_bubble = $DreamingBubble
 @onready var dialog_bubble = $DialogBubble
 
 # Saving the monster's mouth
-@onready var monster_mouth = $MonsterBody1/MonsterMouth
+@onready var monster_mouth = $MonsterBody3/MonsterMouth
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_monster_color()
 	_switch_to_talking()
 
 func _switch_to_talking():
@@ -52,6 +51,6 @@ func _monster_color():
 	var random_color = palette.pick_random()
 	$MonsterBody1/MonsterBody.modulate = random_color
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_button_pressed() -> void:
+		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+		

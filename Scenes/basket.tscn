@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw7urlb7ynrdp"]
+
+[ext_resource type="Script" uid="uid://sqf813ikij5p" path="res://Scripts/basket.gd" id="1_0ksvv"]
+[ext_resource type="Texture2D" uid="uid://bgpidcxw1ssq0" path="res://Image/Basket.png" id="2_6x3n3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrqeg"]
+size = Vector2(832, 688)
+
+[node name="BasketScene" type="Area2D"]
+script = ExtResource("1_0ksvv")
+
+[node name="Basket" type="Sprite2D" parent="."]
+position = Vector2(772, 517)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_6x3n3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(792, 512)
+shape = SubResource("RectangleShape2D_mrqeg")

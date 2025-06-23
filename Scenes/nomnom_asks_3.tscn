@@ -1,0 +1,158 @@
+[gd_scene load_steps=15 format=3 uid="uid://naorlu3u0oyp"]
+
+[ext_resource type="Texture2D" uid="uid://duoep8enl4ukh" path="res://Assets/Monsters/Body/body_whiteA.png" id="1_rgghk"]
+[ext_resource type="Texture2D" uid="uid://cprdyy848bvma" path="res://Assets/Monsters/Arms/arm_whiteA.png" id="2_a8ytn"]
+[ext_resource type="Texture2D" uid="uid://bnawi4dsqf1ep" path="res://Assets/Monsters/Legs/leg_whiteA.png" id="3_efrmx"]
+[ext_resource type="Texture2D" uid="uid://cuwbycirl21n1" path="res://Assets/Monsters/Horns/detail_white_ear_round.png" id="4_fo4ph"]
+[ext_resource type="Texture2D" uid="uid://bc8oj2jvfl4cr" path="res://Assets/Monsters/Eyes/eye_cute_light.png" id="5_ie0sl"]
+[ext_resource type="Texture2D" uid="uid://cqjq4wiopurb3" path="res://Assets/Monsters/Eyes/eye_closed_feminine.png" id="6_1g5p6"]
+[ext_resource type="Texture2D" uid="uid://csr78vkpdmv6" path="res://Assets/Monsters/Eyes/eye_human_red.png" id="7_dlmeu"]
+[ext_resource type="Texture2D" uid="uid://4o4w3opfrnrr" path="res://Assets/Monsters/Mouth/mouth_closed_happy.png" id="8_i4ci6"]
+[ext_resource type="Texture2D" uid="uid://bonuqggrhmpuk" path="res://Assets/Monsters/Mouth/mouthC.png" id="9_4fi4e"]
+[ext_resource type="Texture2D" uid="uid://dlf63i13clon6" path="res://Assets/Monsters/Mouth/mouth_closed_teeth.png" id="10_aqull"]
+[ext_resource type="Texture2D" uid="uid://dxnbouqmdlglm" path="res://Assets/Monsters/Mouth/mouth_closed_sad.png" id="11_n6ygk"]
+[ext_resource type="Texture2D" uid="uid://c4uvlsprwrslj" path="res://Assets/Monsters/Mouth/mouthH.png" id="12_ksns3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_22toq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ie0sl")
+}],
+"loop": true,
+"name": &"begging",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_1g5p6")
+}],
+"loop": true,
+"name": &"happy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("7_dlmeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1g5p6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcu8g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_i4ci6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4fi4e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aqull")
+}],
+"loop": true,
+"name": &"eating",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_n6ygk")
+}],
+"loop": true,
+"name": &"sad",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("9_4fi4e")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_n6ygk")
+}, {
+"duration": 2.0,
+"texture": ExtResource("10_aqull")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ksns3")
+}],
+"loop": true,
+"name": &"wants-to-eat",
+"speed": 5.0
+}]
+
+[node name="MonsterBody3" type="Node2D"]
+
+[node name="MonsterBody" type="Sprite2D" parent="."]
+modulate = Color(0.902403, 0.314819, 0.496501, 1)
+position = Vector2(639.8, 420.8)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("1_rgghk")
+
+[node name="MonsterLeftArm" type="Sprite2D" parent="MonsterBody"]
+z_index = -6
+position = Vector2(210, 120)
+rotation = -0.244346
+texture = ExtResource("2_a8ytn")
+
+[node name="MonsterRightArm" type="Sprite2D" parent="MonsterBody"]
+z_index = -6
+position = Vector2(-210, 120)
+rotation = -2.89725
+scale = Vector2(1, -1)
+texture = ExtResource("2_a8ytn")
+
+[node name="MonsterLeftLeg" type="Sprite2D" parent="MonsterBody"]
+z_index = -6
+position = Vector2(110, 240)
+texture = ExtResource("3_efrmx")
+
+[node name="MonsterRightLeg" type="Sprite2D" parent="MonsterBody"]
+z_index = -6
+position = Vector2(-110, 240)
+rotation = -3.14159
+scale = Vector2(1, -1)
+texture = ExtResource("3_efrmx")
+
+[node name="MonsterLeftTop" type="Sprite2D" parent="MonsterBody"]
+position = Vector2(148, -164.308)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_fo4ph")
+
+[node name="MonsterRightTop" type="Sprite2D" parent="MonsterBody"]
+position = Vector2(-135.077, -164.308)
+rotation = -3.14159
+scale = Vector2(1.2, -1.2)
+texture = ExtResource("4_fo4ph")
+
+[node name="Eyes" type="Node2D" parent="."]
+
+[node name="MonsterEye1" type="AnimatedSprite2D" parent="Eyes"]
+position = Vector2(552, 314)
+scale = Vector2(-0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_22toq")
+animation = &"idle"
+
+[node name="MonsterEye2" type="AnimatedSprite2D" parent="Eyes"]
+position = Vector2(736, 314)
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_22toq")
+animation = &"idle"
+
+[node name="MonsterMouth" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 424)
+scale = Vector2(0.85, 0.85)
+sprite_frames = SubResource("SpriteFrames_bcu8g")
+animation = &"sad"
+autoplay = "sad"
+frame_progress = 0.889147
+speed_scale = 4.0

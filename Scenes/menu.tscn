@@ -1,15 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://dft4ls6o6iuls"]
+[gd_scene load_steps=9 format=3 uid="uid://dft4ls6o6iuls"]
 
 [ext_resource type="Texture2D" uid="uid://d1o10d4etfotw" path="res://Image/Menu.png" id="1_l48gv"]
+[ext_resource type="Script" uid="uid://dc6y2wttkl5ee" path="res://Scripts/menu.gd" id="1_wbdvm"]
 [ext_resource type="Texture2D" uid="uid://c4ehxdjv2ovsi" path="res://Image/Sandwich_1.png" id="2_ecwwl"]
-[ext_resource type="Texture2D" uid="uid://clyau76lrid3l" path="res://Image/Käse_2.png" id="3_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://cdkeoeec325cj" path="res://Image/Toast_2.png" id="4_nrnbx"]
-[ext_resource type="Texture2D" uid="uid://b42j2ijwxadrp" path="res://Image/Tomate_2.png" id="5_iqepy"]
+[ext_resource type="Texture2D" uid="uid://uvctji8xtcmy" path="res://Image/Cheese.png" id="4_wbdvm"]
 [ext_resource type="Texture2D" uid="uid://5x6m1nx5i1te" path="res://Image/Lettuce_1.png" id="6_h1wq0"]
+[ext_resource type="Texture2D" uid="uid://cuasl7lev7f84" path="res://Image/Tomato.png" id="6_q3rjx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l48gv"]
 
-[node name="Menu" type="Node2D"]
+[node name="MenuScene" type="Node2D"]
+script = ExtResource("1_wbdvm")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -16.0
@@ -19,31 +21,79 @@ offset_bottom = 1000.0
 texture = SubResource("CompressedTexture2D_l48gv")
 
 [node name="Menu" type="Sprite2D" parent="."]
-position = Vector2(744, 512)
-scale = Vector2(0.955322, 1.10962)
+position = Vector2(645.656, 374.437)
+scale = Vector2(0.82727, 0.840943)
 texture = ExtResource("1_l48gv")
 
-[node name="Sandwich1" type="Sprite2D" parent="."]
-position = Vector2(464, 456)
+[node name="Sandwich" type="Sprite2D" parent="."]
+position = Vector2(404, 339)
 scale = Vector2(0.726562, 0.890625)
 texture = ExtResource("2_ecwwl")
 
-[node name="Käse2" type="Sprite2D" parent="."]
-position = Vector2(880, 352)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_kk3ma")
+[node name="Ingredients" type="Node2D" parent="."]
+position = Vector2(728, 224)
 
-[node name="Toast2" type="Sprite2D" parent="."]
-position = Vector2(880, 185)
-scale = Vector2(0.314, 0.3)
+[node name="Cheese" type="Sprite2D" parent="Ingredients"]
+position = Vector2(239, -50)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_wbdvm")
+
+[node name="Toast" type="Sprite2D" parent="Ingredients"]
+position = Vector2(40, -56)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_nrnbx")
 
-[node name="Tomate2" type="Sprite2D" parent="."]
-position = Vector2(880, 540.8)
-scale = Vector2(0.388, 0.345312)
-texture = ExtResource("5_iqepy")
+[node name="Tomatoes" type="Sprite2D" parent="Ingredients"]
+position = Vector2(50, 182)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_q3rjx")
 
-[node name="Lettuce1" type="Sprite2D" parent="."]
-position = Vector2(880, 724.8)
-scale = Vector2(1.3, 1.3)
+[node name="Lettuce" type="Sprite2D" parent="Ingredients"]
+position = Vector2(248, 185)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_h1wq0")
+
+[node name="ToastLabel" type="Label" parent="Ingredients"]
+offset_right = 88.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheeseLabel" type="Label" parent="Ingredients"]
+offset_left = 208.0
+offset_right = 296.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TomatoesLabel" type="Label" parent="Ingredients"]
+offset_top = 247.0
+offset_right = 88.0
+offset_bottom = 337.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LettuceLabel" type="Label" parent="Ingredients"]
+offset_left = 208.0
+offset_top = 251.0
+offset_right = 296.0
+offset_bottom = 341.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 65
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 908.0
+offset_top = 589.0
+offset_right = 1251.0
+offset_bottom = 773.0
+text = "Next"
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
