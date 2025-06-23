@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dptryn72usnu0"]
+[gd_scene load_steps=25 format=3 uid="uid://bcydpj0tbcue1"]
 
 [ext_resource type="Script" uid="uid://b2rl0mm4o18k4" path="res://Scripts/hand_gesture.gd" id="1_ldpp1"]
 [ext_resource type="Texture2D" uid="uid://coj12iciei7l6" path="res://Assets/HandGestures/One_Hand.png" id="1_rwwqq"]
