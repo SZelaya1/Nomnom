@@ -12,4 +12,4 @@ func _on_sandwich_dropped():
 	end_button.visible = true
 	
 func _on_end_button_pressed():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://Scenes/select_game.tscn")
