@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dpemvhf3qggfy"]
 
 [ext_resource type="Script" uid="uid://baxpanvf5swc5" path="res://Scripts/sandwich.gd" id="1_p0dev"]
-[ext_resource type="Texture2D" uid="uid://gxmkbnodmx0b" path="res://Image/Sandwich_3.png" id="1_u1ku4"]
+[ext_resource type="Texture2D" uid="uid://cmggmxntu3oyk" path="res://Assets/Food/Sandwich_1.png" id="2_xbpk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0dev"]
 size = Vector2(388, 315)
@@ -11,8 +11,9 @@ script = ExtResource("1_p0dev")
 
 [node name="Sandwich" type="Sprite2D" parent="."]
 position = Vector2(369, 422)
+rotation = -0.254818
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("1_u1ku4")
+texture = ExtResource("2_xbpk7")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(0, -3.05176e-05)

@@ -23,5 +23,7 @@ func _switch_to_talking():
 	dreaming_bubble.visible = false
 
 func _on_button_pressed() -> void:
-		get_tree().change_scene_to_file("res://Scenes/menu.tscn")
-		
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+
+func _on_back_to_select_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/select_game.tscn")

@@ -1,7 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://boj0a1osqb2if"]
+[gd_scene load_steps=19 format=3 uid="uid://boj0a1osqb2if"]
 
 [ext_resource type="Script" uid="uid://7b8gapqb0eyc" path="res://Scripts/cooking.gd" id="1_3ucsr"]
-[ext_resource type="Texture2D" uid="uid://db8w2vrxdxlx2" path="res://Assets/Backgrounds/KitchenBackground.jpg" id="1_mihmv"]
+[ext_resource type="Texture2D" uid="uid://c64b3d10bndq" path="res://Assets/Backgrounds/KitchenBackground.png" id="2_3ucsr"]
 [ext_resource type="PackedScene" uid="uid://cw7urlb7ynrdp" path="res://Scenes/basket.tscn" id="2_jba1e"]
 [ext_resource type="Texture2D" uid="uid://byt5ne3jiimps" path="res://Image/Plate.png" id="3_sxt81"]
 [ext_resource type="Texture2D" uid="uid://dpulcwjouagh2" path="res://Image/BreadLoaf.png" id="4_atedy"]
@@ -13,17 +13,22 @@
 [ext_resource type="PackedScene" uid="uid://b3mpfwm1p5prw" path="res://Scenes/lettuce.tscn" id="10_3ucsr"]
 [ext_resource type="Texture2D" uid="uid://cuasl7lev7f84" path="res://Image/Tomato.png" id="10_tyq45"]
 [ext_resource type="PackedScene" uid="uid://dgrrx5e6q483p" path="res://Scenes/tomatoes.tscn" id="12_3ucsr"]
-[ext_resource type="Texture2D" uid="uid://cxarjn4rb8ttk" path="res://Assets/Various/Square.png" id="12_atedy"]
+[ext_resource type="Texture2D" uid="uid://b184hlbftn1s6" path="res://Assets/Various/menu_box.png" id="13_nrac7"]
+[ext_resource type="Texture2D" uid="uid://cimp3y4ohirfl" path="res://Assets/Buttons/continue_b.svg" id="15_s8y7v"]
+[ext_resource type="FontFile" uid="uid://dvo7fxla4t821" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="15_tyq45"]
+[ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="16_ynlyi"]
+[ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="17_nrac7"]
 
 [node name="Cooking" type="Node2D"]
 script = ExtResource("1_3ucsr")
 
 [node name="Background" type="TextureRect" parent="."]
 z_index = -6
-offset_left = 8.0
-offset_right = 1280.0
-offset_bottom = 800.0
-texture = ExtResource("1_mihmv")
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 1288.0
+offset_bottom = 808.0
+texture = ExtResource("2_3ucsr")
 expand_mode = 1
 
 [node name="BasketScene" parent="." instance=ExtResource("2_jba1e")]
@@ -92,80 +97,98 @@ rotation = 0.958186
 scale = Vector2(0.19, 0.19)
 
 [node name="Square" type="Sprite2D" parent="."]
-position = Vector2(32, 178)
-scale = Vector2(0.85, 0.85)
-texture = ExtResource("12_atedy")
+position = Vector2(151.425, 135.425)
+scale = Vector2(0.335864, 0.335864)
+texture = ExtResource("13_nrac7")
 
 [node name="ToastMenu" type="Sprite2D" parent="Square"]
-position = Vector2(32.9412, -150.588)
-scale = Vector2(0.176471, 0.176471)
+position = Vector2(-215.638, -165.022)
+scale = Vector2(0.279131, 0.279131)
 texture = ExtResource("5_3ucsr")
 
 [node name="CheeseMenu" type="Sprite2D" parent="Square"]
-position = Vector2(32.9412, -44.7059)
-scale = Vector2(0.176471, 0.176471)
+position = Vector2(120.808, -165.022)
+scale = Vector2(0.279131, 0.279131)
 texture = ExtResource("6_s8y7v")
 
 [node name="TomatoMenu" type="Sprite2D" parent="Square"]
-position = Vector2(32.9412, 61.1765)
-scale = Vector2(0.22, 0.22)
+position = Vector2(-209.683, 170.923)
+scale = Vector2(0.302392, 0.302392)
 texture = ExtResource("10_tyq45")
 
 [node name="LettuceMenu" type="Sprite2D" parent="Square"]
-position = Vector2(32.9412, 167.059)
-scale = Vector2(0.176471, 0.176471)
+position = Vector2(126.763, 178.41)
+scale = Vector2(0.25587, 0.25587)
 texture = ExtResource("8_ynlyi")
 
 [node name="ToastLabel" type="Label" parent="Square"]
-offset_left = 103.471
-offset_top = -195.353
-offset_right = 169.471
-offset_bottom = -105.353
+offset_left = -117.384
+offset_top = -221.593
+offset_right = -51.3839
+offset_bottom = -87.593
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 65
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_tyq45")
+theme_override_font_sizes/font_size = 90
 text = "2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CheeseLabel" type="Label" parent="Square"]
-offset_left = 103.529
-offset_top = -89.4118
-offset_right = 169.529
-offset_bottom = 0.588242
+offset_left = 216.085
+offset_top = -221.593
+offset_right = 282.085
+offset_bottom = -87.593
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 65
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_tyq45")
+theme_override_font_sizes/font_size = 90
 text = "2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="TomatoesLabel" type="Label" parent="Square"]
-offset_left = 103.529
-offset_top = 16.4706
-offset_right = 169.529
-offset_bottom = 106.471
+offset_left = -115.527
+offset_top = 123.49
+offset_right = -49.5268
+offset_bottom = 257.49
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 65
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_tyq45")
+theme_override_font_sizes/font_size = 90
 text = "2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="LettuceLabel" type="Label" parent="Square"]
-offset_left = 103.529
-offset_top = 122.353
-offset_right = 169.529
-offset_bottom = 212.353
+offset_left = 215.731
+offset_top = 124.256
+offset_right = 281.731
+offset_bottom = 258.256
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 65
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("15_tyq45")
+theme_override_font_sizes/font_size = 90
 text = "2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NextButton" type="Button" parent="."]
+[node name="NextButton" type="TextureButton" parent="."]
 visible = false
-offset_left = 944.0
-offset_top = 640.0
-offset_right = 1256.0
-offset_bottom = 776.0
-text = "Next"
+offset_left = 1020.0
+offset_top = 664.0
+offset_right = 1184.0
+offset_bottom = 736.0
+texture_normal = ExtResource("15_s8y7v")
+stretch_mode = 0
+
+[node name="BackToSelect" type="TextureButton" parent="."]
+offset_left = 49.0
+offset_top = 679.0
+offset_right = 125.0
+offset_bottom = 755.0
+texture_normal = ExtResource("16_ynlyi")
+texture_pressed = ExtResource("17_nrac7")
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="BackToSelect" to="." method="_on_back_to_select_pressed"]
