@@ -64,6 +64,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 
 [node name="TextureButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 940.0
 offset_top = 668.0
 offset_right = 1216.0
@@ -71,3 +72,5 @@ offset_bottom = 744.0
 texture_normal = ExtResource("7_y7lm3")
 texture_pressed = ExtResource("8_2ebrn")
 stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="MonsterScene" method="_on_end_button_pressed"]
