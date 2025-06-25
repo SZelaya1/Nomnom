@@ -18,6 +18,8 @@ config/icon="uid://1k8ixhv30nxw"
 [autoload]
 
 Global="*res://Scripts/global.gd"
+AudioManagerMain="*res://Scenes/audio_manager_main.tscn"
+AudioManagerCooking="*res://Scenes/audio_manager_cooking.tscn"
 
 [display]
 

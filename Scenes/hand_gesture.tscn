@@ -133,7 +133,7 @@ texture = ExtResource("18_eae8t")
 
 [node name="BackgroundMusic_HG" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_j3f8r")
-volume_db = -10.0
+volume_db = -20.0
 autoplay = true
 
 [connection signal="pressed" from="UI/BackToSelect" to="." method="_on_back_to_select_pressed"]

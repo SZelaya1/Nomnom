@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyw25henoe2gr"]
+
+[ext_resource type="Script" uid="uid://du4gwmdjdjv2x" path="res://Scripts/audio_manager_cooking.gd" id="1_wk3dh"]
+[ext_resource type="AudioStream" uid="uid://dcpnkydasd2w4" path="res://Assets/Audios/cooking.wav" id="2_frelf"]
+
+[node name="AudioManager_Cooking" type="Node"]
+script = ExtResource("1_wk3dh")
+
+[node name="BackgroundMusic_Cooking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_frelf")
+volume_db = -30.0

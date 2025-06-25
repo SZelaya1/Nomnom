@@ -1,21 +1,18 @@
-[gd_scene load_steps=28 format=3 uid="uid://cqe5p2lxv74xh"]
+[gd_scene load_steps=24 format=3 uid="uid://cqe5p2lxv74xh"]
 
 [ext_resource type="Script" uid="uid://bi2f7q0oy2kov" path="res://Scripts/main_menu.gd" id="1_ne6ao"]
 [ext_resource type="Texture2D" uid="uid://nq6hfay4q5vh" path="res://Assets/Buttons/play_b.svg" id="2_n45e2"]
 [ext_resource type="Texture2D" uid="uid://r7irqgsyq21r" path="res://Assets/Buttons/play_b_pressed.svg" id="3_cp0ys"]
-[ext_resource type="Texture2D" uid="uid://ctjobjic8pfda" path="res://Assets/Buttons/help_b.svg" id="3_opfnp"]
 [ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="4_cp0ys"]
-[ext_resource type="Texture2D" uid="uid://dej8fjpjqpd56" path="res://Assets/Buttons/help_b_pressed.svg" id="5_trj04"]
 [ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="6_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://4evvcy0nki2a" path="res://Assets/Buttons/volume_b.svg" id="8_t1dhk"]
-[ext_resource type="Texture2D" uid="uid://dyca5ksr5816w" path="res://Assets/Buttons/settings_b.svg" id="9_5egv6"]
 [ext_resource type="Texture2D" uid="uid://jiibwgtvetqa" path="res://Assets/Various/game_title.png" id="9_trj04"]
 [ext_resource type="Texture2D" uid="uid://bhxxmwn65rc8l" path="res://Assets/Backgrounds/MM_bg.png" id="10_84iac"]
 [ext_resource type="Texture2D" uid="uid://6wrn1yd3yhco" path="res://Assets/Food/cheese.png" id="12_vtepg"]
 [ext_resource type="Texture2D" uid="uid://dtynjk14hqjli" path="res://Assets/Food/toast.png" id="13_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://dg8dujttqu7ea" path="res://Assets/Food/Tomate_1.png" id="14_wyh8j"]
 [ext_resource type="Texture2D" uid="uid://dup0kuyiu7phh" path="res://Assets/Food/Lettuce_2.png" id="15_ujyyl"]
-[ext_resource type="Script" path="res://Scripts/floating.gd" id="16_5n0dv"]
+[ext_resource type="Script" uid="uid://dka7raty375ad" path="res://Scripts/floating.gd" id="16_5n0dv"]
 [ext_resource type="Texture2D" uid="uid://ck6s13rbl7f7q" path="res://Assets/Various/2.png" id="16_6dk6o"]
 [ext_resource type="Texture2D" uid="uid://chvqm2ereu8r7" path="res://Assets/Various/3.png" id="17_jr6u5"]
 [ext_resource type="Texture2D" uid="uid://dnv71w4wcmacm" path="res://Assets/Various/4.png" id="18_6m47u"]
@@ -26,7 +23,6 @@
 [ext_resource type="Texture2D" uid="uid://dr5g5b4m6k1j2" path="res://Assets/Various/planet.png" id="23_84iac"]
 [ext_resource type="Texture2D" uid="uid://bn37w1t2s2xx" path="res://Assets/Various/star 1.png" id="24_5n0dv"]
 [ext_resource type="Texture2D" uid="uid://c1xc2yhcojqcu" path="res://Assets/Various/star 2.png" id="25_ne6ao"]
-[ext_resource type="AudioStream" uid="uid://dgkdsbel8gk7i" path="res://Assets/Audios/main_music.wav" id="27_ne6ao"]
 
 [node name="Main Menu" type="Node2D"]
 script = ExtResource("1_ne6ao")
@@ -41,22 +37,13 @@ offset_bottom = 103.0
 [node name="Play" type="TextureButton" parent="Button_manager"]
 z_index = 2
 layout_mode = 0
-offset_left = 479.0
-offset_top = 533.0
-offset_right = 801.0
-offset_bottom = 621.0
+offset_left = 448.0
+offset_top = 591.0
+offset_right = 832.0
+offset_bottom = 695.0
 texture_normal = ExtResource("2_n45e2")
 texture_pressed = ExtResource("3_cp0ys")
-
-[node name="Help" type="TextureButton" parent="Button_manager"]
-z_index = 2
-layout_mode = 0
-offset_left = 502.0
-offset_top = 641.0
-offset_right = 778.0
-offset_bottom = 716.0
-texture_normal = ExtResource("3_opfnp")
-texture_pressed = ExtResource("5_trj04")
+stretch_mode = 0
 
 [node name="Quit" type="TextureButton" parent="Button_manager"]
 z_index = 2
@@ -70,19 +57,11 @@ texture_pressed = ExtResource("6_cp0ys")
 
 [node name="Volume" type="TextureButton" parent="Button_manager"]
 layout_mode = 0
-offset_left = 1081.0
-offset_top = 72.0
-offset_right = 1157.0
-offset_bottom = 148.0
-texture_normal = ExtResource("8_t1dhk")
-
-[node name="Settings" type="TextureButton" parent="Button_manager"]
-layout_mode = 0
 offset_left = 1161.0
 offset_top = 73.0
 offset_right = 1237.0
 offset_bottom = 149.0
-texture_normal = ExtResource("9_5egv6")
+texture_normal = ExtResource("8_t1dhk")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1280.0
@@ -93,9 +72,9 @@ metadata/_edit_lock_ = true
 
 [node name="Game_Title" type="TextureRect" parent="."]
 offset_left = 284.0
-offset_top = -35.0
+offset_top = 14.0
 offset_right = 1022.0
-offset_bottom = 537.0
+offset_bottom = 586.0
 mouse_filter = 2
 texture = ExtResource("9_trj04")
 metadata/_edit_lock_ = true
@@ -159,7 +138,7 @@ texture = ExtResource("15_ujyyl")
 script = ExtResource("16_5n0dv")
 
 [node name="2" type="Sprite2D" parent="Decorations"]
-position = Vector2(403, 385)
+position = Vector2(428, 462)
 rotation = 0.424115
 scale = Vector2(0.266058, 0.266058)
 texture = ExtResource("16_6dk6o")
@@ -235,12 +214,6 @@ rotation = -1.35787
 scale = Vector2(0.341461, 0.341461)
 texture = ExtResource("25_ne6ao")
 script = ExtResource("16_5n0dv")
-
-[node name="BackgroundMusic_Main" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("27_ne6ao")
-volume_db = -5.0
-autoplay = true
-area_mask = 3
 
 [connection signal="pressed" from="Button_manager/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

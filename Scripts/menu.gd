@@ -13,6 +13,13 @@ func _ready()  -> void:
 	tomatoes.text = str(Global.tomatoesNumber)
 	lettuce.text = str(Global.lettuceNumber)
 	
+	# Stops main menu music
+	if AudioManagerMain.has_method("stop_music"):
+		AudioManagerMain.stop_music()
+
+	# Plays music from this scene
+	AudioManagerCooking.play_music("res://Assets/Audios/cooking.wav")
+	
 func _on_next_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/cooking.tscn")
 

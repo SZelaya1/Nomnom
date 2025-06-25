@@ -31,8 +31,7 @@ func _on_close_tutorial_pressed():
 	$Close_Tutorial.visible = false
 
 func _ready():
-	$BackgroundMusic.play()
-	$BackgroundMusic.connect("finished", Callable(self, "_on_music_finished"))
-
-func _on_music_finished():
-	$BackgroundMusic.play()
+	AudioManagerMain.play_music("res://Assets/Audios/main_music.wav")
+	
+	if AudioManagerCooking.has_method("stop_music"):
+		AudioManagerCooking.stop_music()

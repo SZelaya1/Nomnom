@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c36hjx2gmmt0g"]
+[gd_scene load_steps=23 format=3 uid="uid://c36hjx2gmmt0g"]
 
 [ext_resource type="Script" uid="uid://d2kns86j4smy6" path="res://Scripts/select_game.gd" id="1_jcnox"]
 [ext_resource type="Texture2D" uid="uid://cl1w43dcp2vvn" path="res://Assets/Backgrounds/GS_Background.png" id="1_ne6bh"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d4koe26xfs3w3" path="res://Assets/Buttons/question__b.svg" id="6_7g5tu"]
 [ext_resource type="Texture2D" uid="uid://dtfydy132bf67" path="res://Assets/Buttons/question__b_pressed.svg" id="7_kua6a"]
 [ext_resource type="Texture2D" uid="uid://bcjgu3oeu1ca3" path="res://Assets/HandGestures/Five_Hand.png" id="8_ffxa7"]
-[ext_resource type="Script" path="res://Scripts/mini_game_animations.gd" id="8_ojtqv"]
+[ext_resource type="Script" uid="uid://oy2aen6tog4u" path="res://Scripts/mini_game_animations.gd" id="8_ojtqv"]
 [ext_resource type="Texture2D" uid="uid://dh2v43puv0s60" path="res://Assets/Buttons/exit_x_b.svg" id="8_q2qx5"]
 [ext_resource type="Texture2D" uid="uid://bb2kspli54h08" path="res://Assets/HandGestures/Three_Hand.png" id="9_dkkfp"]
 [ext_resource type="Texture2D" uid="uid://dgr7upkgr20p0" path="res://Assets/Buttons/exit_x_b_pressed.svg" id="9_qltld"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://ddhdxwpxygks4" path="res://Assets/Various/DialogBubble_2.png" id="11_1j3ny"]
 [ext_resource type="Texture2D" uid="uid://d24138msn8esq" path="res://Assets/Monsters/Shadow.png" id="11_clv4g"]
 [ext_resource type="Texture2D" uid="uid://cmggmxntu3oyk" path="res://Assets/Food/Sandwich_1.png" id="11_dkkfp"]
-[ext_resource type="AudioStream" uid="uid://dgkdsbel8gk7i" path="res://Assets/Audios/main_music.wav" id="17_qltld"]
 
 [sub_resource type="Animation" id="Animation_1j3ny"]
 resource_name = "Hello"
@@ -284,10 +283,6 @@ texture = ExtResource("11_1j3ny")
 position = Vector2(1145, 310)
 scale = Vector2(0.203125, 0.203125)
 texture = ExtResource("11_dkkfp")
-
-[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("17_qltld")
-volume_db = -5.0
 
 [node name="TutorialVideo" type="VideoStreamPlayer" parent="."]
 visible = false

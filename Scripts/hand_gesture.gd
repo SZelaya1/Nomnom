@@ -50,8 +50,8 @@ func _on_button_pressed(number: int):
 		print("Wrong answer")
 		streak = 0
 		_show_feedback(number, false)
-		
-	# 5 in a row effect
+
+# 5 in a row effect
 func _show_streak():
 	$StreakImage.visible = true
 	await get_tree().create_timer(2.0).timeout
@@ -78,10 +78,17 @@ func _show_feedback(number: int, correct: bool):
 			button_node.set_feedback(correct)
 
 func _ready():
+	# Stops the music from the menu
+	if AudioManagerMain.has_method("stop_music"):
+		AudioManagerMain.stop_music()
+
+	# Music from this scene
 	randomize()
 	_create_new_exercise()
-	$BackgroundMusic_HG.play()
-	$BackgroundMusic_HG.connect("finished", Callable(self, "_on_music_finished"))
+	if $BackgroundMusic_HG.stream:
+		$BackgroundMusic_HG.play()
+		if not $BackgroundMusic_HG.is_connected("finished", Callable(self, "_on_music_finished")):
+			$BackgroundMusic_HG.connect("finished", Callable(self, "_on_music_finished"))
 
 func _on_music_finished():
 	$BackgroundMusic_HG.play()

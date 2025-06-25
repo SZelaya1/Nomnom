@@ -7,6 +7,10 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_switch_to_talking()
+	
+	# Stops the music from the menu
+	if AudioManagerMain.has_method("stop_music"):
+		AudioManagerMain.stop_music()
 
 func _switch_to_talking():
 	# Start with dialog bubble hidden
