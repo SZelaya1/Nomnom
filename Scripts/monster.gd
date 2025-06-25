@@ -6,5 +6,4 @@ extends Area2D
 
 func _on_sandwich_dropped():
 	sprite.texture = preload("res://Image/nomnom_hearts.png")
-	dialogue_label.text = "Thank you!"
 	dialogue_group.visible = true
