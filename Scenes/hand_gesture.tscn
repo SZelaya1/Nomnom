@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bcydpj0tbcue1"]
+[gd_scene load_steps=22 format=3 uid="uid://bcydpj0tbcue1"]
 
 [ext_resource type="Script" uid="uid://b2rl0mm4o18k4" path="res://Scripts/hand_gesture.gd" id="1_ldpp1"]
 [ext_resource type="Texture2D" uid="uid://coj12iciei7l6" path="res://Assets/HandGestures/One_Hand.png" id="1_rwwqq"]
@@ -15,7 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://c1tfyu5xi78nq" path="res://Assets/Various/streakImage.png" id="18_eae8t"]
 [ext_resource type="AudioStream" uid="uid://doo22i601lces" path="res://Assets/Audios/hg_music.mp3" id="19_j3f8r"]
 [ext_resource type="Texture2D" uid="uid://bfl6dmjpr10mb" path="res://Assets/NumberButtons/acht.svg" id="19_xlvun"]
+[ext_resource type="AudioStream" uid="uid://ctxjoft5psvub" path="res://Assets/Audios/correct.ogg" id="20_bx6h4"]
 [ext_resource type="Texture2D" uid="uid://4hpk72u3bkl1" path="res://Assets/NumberButtons/neun.svg" id="21_ecv7b"]
+[ext_resource type="AudioStream" uid="uid://b2qwx5y2aarpr" path="res://Assets/Audios/wrong.ogg" id="21_kps6o"]
 [ext_resource type="Texture2D" uid="uid://boplkcxwsjbox" path="res://Assets/NumberButtons/zehn.svg" id="23_l8dve"]
 [ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="25_4ox78"]
 [ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="26_kfheh"]
@@ -135,5 +137,13 @@ texture = ExtResource("18_eae8t")
 stream = ExtResource("19_j3f8r")
 volume_db = -20.0
 autoplay = true
+
+[node name="FeedBackSounds" type="Node2D" parent="."]
+
+[node name="CorrectSound" type="AudioStreamPlayer2D" parent="FeedBackSounds"]
+stream = ExtResource("20_bx6h4")
+
+[node name="WrongSound" type="AudioStreamPlayer2D" parent="FeedBackSounds"]
+stream = ExtResource("21_kps6o")
 
 [connection signal="pressed" from="UI/BackToSelect" to="." method="_on_back_to_select_pressed"]
