@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d4koe26xfs3w3" path="res://Assets/Buttons/question__b.svg" id="6_7g5tu"]
 [ext_resource type="Texture2D" uid="uid://dtfydy132bf67" path="res://Assets/Buttons/question__b_pressed.svg" id="7_kua6a"]
 [ext_resource type="Texture2D" uid="uid://bcjgu3oeu1ca3" path="res://Assets/HandGestures/Five_Hand.png" id="8_ffxa7"]
-[ext_resource type="Script" uid="uid://oy2aen6tog4u" path="res://Scripts/mini_game_animations.gd" id="8_ojtqv"]
+[ext_resource type="Script" path="res://Scripts/mini_game_animations.gd" id="8_ojtqv"]
 [ext_resource type="Texture2D" uid="uid://dh2v43puv0s60" path="res://Assets/Buttons/exit_x_b.svg" id="8_q2qx5"]
 [ext_resource type="Texture2D" uid="uid://bb2kspli54h08" path="res://Assets/HandGestures/Three_Hand.png" id="9_dkkfp"]
 [ext_resource type="Texture2D" uid="uid://dgr7upkgr20p0" path="res://Assets/Buttons/exit_x_b_pressed.svg" id="9_qltld"]
@@ -289,6 +289,31 @@ texture = ExtResource("11_dkkfp")
 stream = ExtResource("17_qltld")
 volume_db = -5.0
 
+[node name="TutorialVideo" type="VideoStreamPlayer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1600.0
+offset_bottom = 1000.0
+grow_horizontal = 2
+grow_vertical = 2
+loop = true
+
+[node name="Close_Tutorial" type="TextureButton" parent="."]
+visible = false
+offset_left = 1169.0
+offset_top = 36.0
+offset_right = 1245.0
+offset_bottom = 112.0
+texture_normal = ExtResource("8_q2qx5")
+texture_pressed = ExtResource("9_qltld")
+
 [connection signal="pressed" from="Button_Manager/Play_HG" to="." method="_on_play_hg_pressed"]
 [connection signal="pressed" from="Button_Manager/Play_NomNom" to="." method="_on_play_nom_nom_pressed"]
+[connection signal="pressed" from="Button_Manager/Tutorial_HG" to="." method="_on_tutorial_hg_pressed"]
+[connection signal="pressed" from="Button_Manager/Tutorial_NomNom" to="." method="_on_tutorial_nom_nom_pressed"]
 [connection signal="pressed" from="Button_Manager/Exit_Button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Close_Tutorial" to="." method="_on_close_tutorial_pressed"]
