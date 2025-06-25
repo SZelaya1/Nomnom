@@ -5,6 +5,8 @@ extends Node2D
 @onready var tomatoes = $Square/TomatoesLabel
 @onready var lettuce = $Square/LettuceLabel
 
+var celebration_triggered = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	toast.text = str(Global.toastNumber)
@@ -13,9 +15,12 @@ func _ready():
 	lettuce.text = str(Global.lettuceNumber)
 
 func _process(delta: float):
-	if Global.toastNumber == 0 and Global.cheeseNumber == 0 and Global.tomatoesNumber == 0 and Global.lettuceNumber == 0:
+	if not celebration_triggered and Global.toastNumber == 0 and Global.cheeseNumber == 0 and Global.tomatoesNumber == 0 and Global.lettuceNumber == 0:
+		celebration_triggered = true
 		$NextButton.visible = true
-		
+		$Confetti.visible = true
+		$Confetti.play()
+		$YaySound.play()
 
 func _on_next_button_pressed():
 	UiButtonAudio.play_click()
