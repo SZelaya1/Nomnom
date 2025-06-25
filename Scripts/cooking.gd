@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 		$NextButton.visible = true
 
 func _on_next_button_pressed() -> void:
+	UiButtonAudio.play_click()
 	get_tree().change_scene_to_file("res://Scenes/nomnom_eats.tscn")
 
 

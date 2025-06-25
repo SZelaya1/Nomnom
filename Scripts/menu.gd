@@ -21,6 +21,7 @@ func _ready()  -> void:
 	AudioManagerCooking.play_music("res://Assets/Audios/cooking.wav")
 	
 func _on_next_button_pressed() -> void:
+	UiButtonAudio.play_click()
 	get_tree().change_scene_to_file("res://Scenes/cooking.tscn")
 
 func _on_back_to_select_pressed() -> void:

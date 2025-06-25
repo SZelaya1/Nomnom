@@ -1,11 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://cqe5p2lxv74xh"]
+[gd_scene load_steps=23 format=3 uid="uid://cqe5p2lxv74xh"]
 
 [ext_resource type="Script" uid="uid://bi2f7q0oy2kov" path="res://Scripts/main_menu.gd" id="1_ne6ao"]
 [ext_resource type="Texture2D" uid="uid://nq6hfay4q5vh" path="res://Assets/Buttons/play_b.svg" id="2_n45e2"]
 [ext_resource type="Texture2D" uid="uid://r7irqgsyq21r" path="res://Assets/Buttons/play_b_pressed.svg" id="3_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="4_cp0ys"]
 [ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="6_cp0ys"]
-[ext_resource type="Texture2D" uid="uid://4evvcy0nki2a" path="res://Assets/Buttons/volume_b.svg" id="8_t1dhk"]
 [ext_resource type="Texture2D" uid="uid://jiibwgtvetqa" path="res://Assets/Various/game_title.png" id="9_trj04"]
 [ext_resource type="Texture2D" uid="uid://bhxxmwn65rc8l" path="res://Assets/Backgrounds/MM_bg.png" id="10_84iac"]
 [ext_resource type="Texture2D" uid="uid://6wrn1yd3yhco" path="res://Assets/Food/cheese.png" id="12_vtepg"]
@@ -55,14 +54,6 @@ offset_bottom = 736.0
 texture_normal = ExtResource("4_cp0ys")
 texture_pressed = ExtResource("6_cp0ys")
 
-[node name="Volume" type="TextureButton" parent="Button_manager"]
-layout_mode = 0
-offset_left = 1161.0
-offset_top = 73.0
-offset_right = 1237.0
-offset_bottom = 149.0
-texture_normal = ExtResource("8_t1dhk")
-
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 1280.0
 offset_bottom = 800.0
@@ -82,7 +73,7 @@ metadata/_edit_lock_ = true
 [node name="Decorations" type="Node2D" parent="."]
 
 [node name="Cheese_1" type="Sprite2D" parent="Decorations"]
-position = Vector2(1136, 282)
+position = Vector2(1160, 160)
 rotation = -0.698132
 scale = Vector2(0.140949, 0.140949)
 texture = ExtResource("12_vtepg")
@@ -117,7 +108,7 @@ texture = ExtResource("14_wyh8j")
 script = ExtResource("16_5n0dv")
 
 [node name="Tomato_2" type="Sprite2D" parent="Decorations"]
-position = Vector2(927, 510)
+position = Vector2(944, 536)
 rotation = -0.424115
 scale = Vector2(0.105401, 0.105758)
 texture = ExtResource("14_wyh8j")
@@ -165,7 +156,7 @@ texture = ExtResource("19_84iac")
 script = ExtResource("16_5n0dv")
 
 [node name="#" type="Sprite2D" parent="Decorations"]
-position = Vector2(1051, 618)
+position = Vector2(1093, 549)
 scale = Vector2(0.321429, 0.321429)
 texture = ExtResource("20_5n0dv")
 script = ExtResource("16_5n0dv")
@@ -178,7 +169,7 @@ texture = ExtResource("21_ne6ao")
 script = ExtResource("16_5n0dv")
 
 [node name="-" type="Sprite2D" parent="Decorations"]
-position = Vector2(1005, 125)
+position = Vector2(1040, 104)
 scale = Vector2(0.369565, 0.369565)
 texture = ExtResource("22_tt8ml")
 script = ExtResource("16_5n0dv")
@@ -202,14 +193,14 @@ texture = ExtResource("25_ne6ao")
 script = ExtResource("16_5n0dv")
 
 [node name="Star_3" type="Sprite2D" parent="Decorations"]
-position = Vector2(907, 195)
+position = Vector2(936, 224)
 rotation = -0.84823
 scale = Vector2(0.419355, 0.419355)
 texture = ExtResource("25_ne6ao")
 script = ExtResource("16_5n0dv")
 
 [node name="Star_4" type="Sprite2D" parent="Decorations"]
-position = Vector2(1089, 467)
+position = Vector2(1096, 336)
 rotation = -1.35787
 scale = Vector2(0.341461, 0.341461)
 texture = ExtResource("25_ne6ao")

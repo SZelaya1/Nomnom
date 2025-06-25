@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c36hjx2gmmt0g"]
+[gd_scene load_steps=24 format=3 uid="uid://c36hjx2gmmt0g"]
 
 [ext_resource type="Script" uid="uid://d2kns86j4smy6" path="res://Scripts/select_game.gd" id="1_jcnox"]
 [ext_resource type="Texture2D" uid="uid://cl1w43dcp2vvn" path="res://Assets/Backgrounds/GS_Background.png" id="1_ne6bh"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ddhdxwpxygks4" path="res://Assets/Various/DialogBubble_2.png" id="11_1j3ny"]
 [ext_resource type="Texture2D" uid="uid://d24138msn8esq" path="res://Assets/Monsters/Shadow.png" id="11_clv4g"]
 [ext_resource type="Texture2D" uid="uid://cmggmxntu3oyk" path="res://Assets/Food/Sandwich_1.png" id="11_dkkfp"]
+[ext_resource type="AudioStream" uid="uid://bfoio6p4f752w" path="res://Assets/Audios/maximize_001.ogg" id="17_qltld"]
 
 [sub_resource type="Animation" id="Animation_1j3ny"]
 resource_name = "Hello"
@@ -305,6 +306,11 @@ offset_right = 1245.0
 offset_bottom = 112.0
 texture_normal = ExtResource("8_q2qx5")
 texture_pressed = ExtResource("9_qltld")
+
+[node name="ButtonSound" type="Node2D" parent="."]
+
+[node name="ClickTutorial" type="AudioStreamPlayer2D" parent="ButtonSound"]
+stream = ExtResource("17_qltld")
 
 [connection signal="pressed" from="Button_Manager/Play_HG" to="." method="_on_play_hg_pressed"]
 [connection signal="pressed" from="Button_Manager/Play_NomNom" to="." method="_on_play_nom_nom_pressed"]

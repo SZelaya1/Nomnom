@@ -41,6 +41,7 @@ func _on_button_pressed(number: int):
 	if number == right_answer:
 		print("Correct answer")
 		streak += 1
+		$FeedBackSounds/CorrectSound.play()
 		_show_feedback(number, true)
 		if streak % 5 == 0:
 			_show_streak()
@@ -49,6 +50,7 @@ func _on_button_pressed(number: int):
 	else:
 		print("Wrong answer")
 		streak = 0
+		$FeedBackSounds/WrongSound.play()
 		_show_feedback(number, false)
 
 # 5 in a row effect

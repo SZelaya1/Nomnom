@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://m38nyxtv1o6x"]
+
+[ext_resource type="Script" uid="uid://cqrd8hj3roc8s" path="res://Scripts/ui_button_audio.gd" id="1_1e7xg"]
+[ext_resource type="AudioStream" uid="uid://c8dyo1vs7mnrf" path="res://Assets/Audios/drop_003.ogg" id="2_agcg3"]
+
+[node name="UiButtonAudio" type="Node"]
+script = ExtResource("1_1e7xg")
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_agcg3")
+volume_db = -10.0

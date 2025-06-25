@@ -4,6 +4,7 @@ func _on_quit_pressed():
 	get_tree().quit()
 
 func _on_play_pressed():
+	UiButtonAudio.play_click()
 	get_tree().change_scene_to_file("res://Scenes/select_game.tscn")
 
 func _ready():
