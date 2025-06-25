@@ -84,6 +84,7 @@ speed_scale = 0.65
 stream = ExtResource("7_5nnaq")
 
 [node name="NextButton" type="TextureButton" parent="."]
+visible = false
 offset_left = 1052.0
 offset_top = 673.0
 offset_right = 1216.0

@@ -1,7 +1,12 @@
 extends Node
 
-# Storing the random values for each ingredient
-var toastNumber = randi() % 3 + 2
-var cheeseNumber = randi() % 6 + 1
-var tomatoesNumber = randi() % 6 + 1
-var lettuceNumber = randi() % 7 + 1
+var toastNumber: int
+var cheeseNumber: int
+var tomatoesNumber: int
+var lettuceNumber: int
+
+func reset_ingredient_counts():
+	toastNumber = randi() % 3 + 2
+	cheeseNumber = randi() % 6 + 1
+	tomatoesNumber = randi() % 6 + 1
+	lettuceNumber = randi() % 7 + 1

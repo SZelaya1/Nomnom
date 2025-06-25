@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dtynjk14hqjli" path="res://Assets/Food/toast.png" id="13_m3bi6"]
 [ext_resource type="Texture2D" uid="uid://dg8dujttqu7ea" path="res://Assets/Food/Tomate_1.png" id="14_wyh8j"]
 [ext_resource type="Texture2D" uid="uid://dup0kuyiu7phh" path="res://Assets/Food/Lettuce_2.png" id="15_ujyyl"]
-[ext_resource type="Script" uid="uid://dka7raty375ad" path="res://Scripts/floating.gd" id="16_5n0dv"]
+[ext_resource type="Script" path="res://Scripts/floating.gd" id="16_5n0dv"]
 [ext_resource type="Texture2D" uid="uid://ck6s13rbl7f7q" path="res://Assets/Various/2.png" id="16_6dk6o"]
 [ext_resource type="Texture2D" uid="uid://chvqm2ereu8r7" path="res://Assets/Various/3.png" id="17_jr6u5"]
 [ext_resource type="Texture2D" uid="uid://dnv71w4wcmacm" path="res://Assets/Various/4.png" id="18_6m47u"]

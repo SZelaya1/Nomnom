@@ -17,6 +17,12 @@ func stop_music():
 	if music_player.playing:
 		music_player.stop()
 
+func play_correct():
+	$CorrectSound.play()
+
+func play_wrong():
+	$WrongSound.play()
+
 func _on_music_finished():
 	if music_player.stream:
 		music_player.play()

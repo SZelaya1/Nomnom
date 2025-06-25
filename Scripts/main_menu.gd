@@ -1,6 +1,8 @@
 extends Node2D
 
 func _on_quit_pressed():
+	UiButtonAudio.play_close()
+	await get_tree().create_timer(0.3).timeout
 	get_tree().quit()
 
 func _on_play_pressed():

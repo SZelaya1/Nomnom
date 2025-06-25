@@ -39,7 +39,6 @@ func _load_hand_texture(value: int, is_left: bool):
 # Function called by the buttons when clicked
 func _on_button_pressed(number: int):
 	if number == right_answer:
-		print("Correct answer")
 		streak += 1
 		$FeedBackSounds/CorrectSound.play()
 		_show_feedback(number, true)
@@ -48,7 +47,6 @@ func _on_button_pressed(number: int):
 		await get_tree().create_timer(1.0).timeout
 		_create_new_exercise()
 	else:
-		print("Wrong answer")
 		streak = 0
 		$FeedBackSounds/WrongSound.play()
 		_show_feedback(number, false)
@@ -96,4 +94,5 @@ func _on_music_finished():
 	$BackgroundMusic_HG.play()
 
 func _on_back_to_select_pressed():
+	UiButtonAudio.play_close()
 	get_tree().change_scene_to_file("res://Scenes/select_game.tscn")

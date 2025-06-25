@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://boj0a1osqb2if"]
+[gd_scene load_steps=20 format=3 uid="uid://cvsdi7xuge6yi"]
 
 [ext_resource type="Script" uid="uid://7b8gapqb0eyc" path="res://Scripts/cooking.gd" id="1_3ucsr"]
 [ext_resource type="Texture2D" uid="uid://c64b3d10bndq" path="res://Assets/Backgrounds/KitchenBackground.png" id="2_3ucsr"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cdkeoeec325cj" path="res://Image/Toast_2.png" id="5_3ucsr"]
 [ext_resource type="PackedScene" uid="uid://c86c31vii2j6g" path="res://Scenes/toast.tscn" id="5_jba1e"]
 [ext_resource type="Texture2D" uid="uid://uvctji8xtcmy" path="res://Image/Cheese.png" id="6_s8y7v"]
-[ext_resource type="PackedScene" uid="uid://dblsojf1ow4xs" path="res://Scenes/cheese.tscn" id="8_3ucsr"]
+[ext_resource type="PackedScene" uid="uid://jopy6vykvuc3" path="res://Scenes/cheese.tscn" id="8_3ucsr"]
 [ext_resource type="Texture2D" uid="uid://5x6m1nx5i1te" path="res://Image/Lettuce_1.png" id="8_ynlyi"]
 [ext_resource type="PackedScene" uid="uid://b3mpfwm1p5prw" path="res://Scenes/lettuce.tscn" id="10_3ucsr"]
 [ext_resource type="Texture2D" uid="uid://cuasl7lev7f84" path="res://Image/Tomato.png" id="10_tyq45"]
@@ -18,6 +18,7 @@
 [ext_resource type="FontFile" uid="uid://dvo7fxla4t821" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="15_tyq45"]
 [ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="16_ynlyi"]
 [ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="17_nrac7"]
+[ext_resource type="VideoStream" uid="uid://q3w6s7goctyx" path="res://Assets/Videos/Confetti.ogv" id="19_tyq45"]
 
 [node name="Cooking" type="Node2D"]
 script = ExtResource("1_3ucsr")
@@ -189,6 +190,15 @@ offset_right = 125.0
 offset_bottom = 755.0
 texture_normal = ExtResource("16_ynlyi")
 texture_pressed = ExtResource("17_nrac7")
+
+[node name="Confetti" type="VideoStreamPlayer" parent="."]
+offset_left = 904.0
+offset_top = 336.0
+offset_right = 1752.0
+offset_bottom = 1184.0
+scale = Vector2(0.35, 0.35)
+stream = ExtResource("19_tyq45")
+autoplay = true
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
 [connection signal="pressed" from="BackToSelect" to="." method="_on_back_to_select_pressed"]
