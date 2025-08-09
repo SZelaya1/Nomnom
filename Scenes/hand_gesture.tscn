@@ -1,0 +1,151 @@
+[gd_scene load_steps=22 format=3 uid="uid://bcydpj0tbcue1"]
+
+[ext_resource type="Script" uid="uid://b2rl0mm4o18k4" path="res://Scripts/hand_gesture.gd" id="1_ldpp1"]
+[ext_resource type="Texture2D" uid="uid://coj12iciei7l6" path="res://Assets/HandGestures/One_Hand.png" id="1_rwwqq"]
+[ext_resource type="Texture2D" uid="uid://b0q0vemhg42kt" path="res://Assets/Backgrounds/HG - Background.png" id="2_kyxvw"]
+[ext_resource type="Texture2D" uid="uid://bb2kspli54h08" path="res://Assets/HandGestures/Three_Hand.png" id="2_ldpp1"]
+[ext_resource type="Texture2D" uid="uid://da0t1h3kppmma" path="res://Assets/NumberButtons/eins.svg" id="5_hkdaj"]
+[ext_resource type="Script" uid="uid://c501yvp0dg6i0" path="res://Scripts/number_button.gd" id="6_6wwr7"]
+[ext_resource type="Texture2D" uid="uid://bwodv8ftq1vu0" path="res://Assets/NumberButtons/zwei.svg" id="7_6wwr7"]
+[ext_resource type="Texture2D" uid="uid://0fvuec5b1onf" path="res://Assets/NumberButtons/drei.svg" id="9_j40oe"]
+[ext_resource type="Texture2D" uid="uid://grfehob8kl87" path="res://Assets/NumberButtons/vier.svg" id="11_xlvun"]
+[ext_resource type="Texture2D" uid="uid://cqwlsxn4p0823" path="res://Assets/NumberButtons/fuenf.svg" id="13_xlvun"]
+[ext_resource type="Texture2D" uid="uid://daps2tf7v5psy" path="res://Assets/NumberButtons/sechs.svg" id="15_ecv7b"]
+[ext_resource type="Texture2D" uid="uid://dhepd8jruhkhh" path="res://Assets/NumberButtons/sieben.svg" id="17_j40oe"]
+[ext_resource type="Texture2D" uid="uid://c1tfyu5xi78nq" path="res://Assets/Various/streakImage.png" id="18_eae8t"]
+[ext_resource type="AudioStream" uid="uid://doo22i601lces" path="res://Assets/Audios/hg_music.mp3" id="19_j3f8r"]
+[ext_resource type="Texture2D" uid="uid://bfl6dmjpr10mb" path="res://Assets/NumberButtons/acht.svg" id="19_xlvun"]
+[ext_resource type="AudioStream" uid="uid://ctxjoft5psvub" path="res://Assets/Audios/correct.ogg" id="20_bx6h4"]
+[ext_resource type="Texture2D" uid="uid://4hpk72u3bkl1" path="res://Assets/NumberButtons/neun.svg" id="21_ecv7b"]
+[ext_resource type="AudioStream" uid="uid://b2qwx5y2aarpr" path="res://Assets/Audios/wrong.ogg" id="21_kps6o"]
+[ext_resource type="Texture2D" uid="uid://boplkcxwsjbox" path="res://Assets/NumberButtons/zehn.svg" id="23_l8dve"]
+[ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="25_4ox78"]
+[ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="26_kfheh"]
+
+[node name="HandGestureScene" type="Node2D"]
+script = ExtResource("1_ldpp1")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_right = 1281.0
+offset_bottom = 800.0
+texture = ExtResource("2_kyxvw")
+
+[node name="LeftHand" type="Sprite2D" parent="."]
+position = Vector2(478.308, 288.679)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("1_rwwqq")
+
+[node name="RightHand" type="Sprite2D" parent="."]
+position = Vector2(807.347, 286.65)
+scale = Vector2(0.34, 0.34)
+texture = ExtResource("2_ldpp1")
+
+[node name="NumberButtons" type="Node2D" parent="."]
+
+[node name="One" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(323.45, 554.5)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("5_hkdaj")
+script = ExtResource("6_6wwr7")
+
+[node name="Two" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(450.345, 554.345)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("7_6wwr7")
+script = ExtResource("6_6wwr7")
+number_value = 2
+
+[node name="Three" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(579.595, 553.617)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("9_j40oe")
+script = ExtResource("6_6wwr7")
+number_value = 3
+
+[node name="Four" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(708.529, 554.5)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("11_xlvun")
+script = ExtResource("6_6wwr7")
+number_value = 4
+
+[node name="Five" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(835.7, 554.7)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("13_xlvun")
+script = ExtResource("6_6wwr7")
+number_value = 5
+
+[node name="Six" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(963.637, 554.629)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("15_ecv7b")
+script = ExtResource("6_6wwr7")
+number_value = 6
+
+[node name="Seven" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(450.665, 682.7)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("17_j40oe")
+script = ExtResource("6_6wwr7")
+number_value = 7
+
+[node name="Eight" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(579.165, 682.2)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("19_xlvun")
+script = ExtResource("6_6wwr7")
+number_value = 8
+
+[node name="Nine" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(707.665, 682.7)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("21_ecv7b")
+script = ExtResource("6_6wwr7")
+number_value = 9
+
+[node name="Ten" type="Sprite2D" parent="NumberButtons"]
+position = Vector2(835.665, 682.7)
+scale = Vector2(0.215, 0.215)
+texture = ExtResource("23_l8dve")
+script = ExtResource("6_6wwr7")
+number_value = 10
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackToSelect" type="TextureButton" parent="UI"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 679.0
+offset_right = 125.0
+offset_bottom = 755.0
+texture_normal = ExtResource("25_4ox78")
+texture_pressed = ExtResource("26_kfheh")
+
+[node name="StreakImage" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1088, 184)
+scale = Vector2(0.813725, 0.813725)
+texture = ExtResource("18_eae8t")
+
+[node name="BackgroundMusic_HG" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_j3f8r")
+volume_db = -30.0
+autoplay = true
+
+[node name="FeedBackSounds" type="Node2D" parent="."]
+
+[node name="CorrectSound" type="AudioStreamPlayer2D" parent="FeedBackSounds"]
+stream = ExtResource("20_bx6h4")
+volume_db = -5.0
+
+[node name="WrongSound" type="AudioStreamPlayer2D" parent="FeedBackSounds"]
+stream = ExtResource("21_kps6o")
+volume_db = -5.0
+
+[connection signal="pressed" from="UI/BackToSelect" to="." method="_on_back_to_select_pressed"]

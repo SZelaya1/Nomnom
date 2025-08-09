@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b07k87rbxsl08"]
+
+[ext_resource type="Script" uid="uid://vrevkymj1opg" path="res://Scripts/monster.gd" id="1_mrqeg"]
+[ext_resource type="Texture2D" uid="uid://ddl0g0vqmumtc" path="res://Assets/Monsters/Nomnom.png" id="1_s3gyj"]
+[ext_resource type="AudioStream" uid="uid://byisqgr50a02e" path="res://Assets/Audios/yaySound.ogg" id="3_hyvb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mrqeg"]
+size = Vector2(708, 603)
+
+[node name="MonsterScene" type="Area2D"]
+script = ExtResource("1_mrqeg")
+
+[node name="Nomnom" type="Sprite2D" parent="."]
+position = Vector2(772, 517)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_s3gyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(770, 520.5)
+shape = SubResource("RectangleShape2D_mrqeg")
+
+[node name="YaySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hyvb2")

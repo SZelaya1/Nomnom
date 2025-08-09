@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="NomNom"
-run/main_scene="uid://jwrhnq2glm0i"
+run/main_scene="uid://cqe5p2lxv74xh"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://1k8ixhv30nxw"
+
+[autoload]
+
+Global="*res://Scripts/global.gd"
+AudioManagerMain="*res://Scenes/audio_manager_main.tscn"
+AudioManagerCooking="*res://Scenes/audio_manager_cooking.tscn"
+UiButtonAudio="*res://Scenes/UIButtonAudio.tscn"
 
 [display]
 

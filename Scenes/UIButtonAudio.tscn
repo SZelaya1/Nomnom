@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp03v3o541rjv"]
+
+[ext_resource type="Script" uid="uid://cqrd8hj3roc8s" path="res://Scripts/ui_button_audio.gd" id="1_1e7xg"]
+[ext_resource type="AudioStream" uid="uid://c8dyo1vs7mnrf" path="res://Assets/Audios/drop_003.ogg" id="2_agcg3"]
+[ext_resource type="AudioStream" uid="uid://c1dg80k2f4jul" path="res://Assets/Audios/minimize_008.mp3" id="3_agcg3"]
+[ext_resource type="AudioStream" uid="uid://bfoio6p4f752w" path="res://Assets/Audios/maximize_001.ogg" id="4_vjybl"]
+
+[node name="UiButtonAudio" type="Node"]
+script = ExtResource("1_1e7xg")
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_agcg3")
+volume_db = -10.0
+
+[node name="ButtonClose" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_agcg3")
+volume_db = -10.0
+
+[node name="ButtonOpenTutorial" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vjybl")
+volume_db = -10.0

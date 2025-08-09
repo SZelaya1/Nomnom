@@ -1,0 +1,210 @@
+[gd_scene load_steps=23 format=3 uid="uid://cqe5p2lxv74xh"]
+
+[ext_resource type="Script" uid="uid://bi2f7q0oy2kov" path="res://Scripts/main_menu.gd" id="1_ne6ao"]
+[ext_resource type="Texture2D" uid="uid://nq6hfay4q5vh" path="res://Assets/Buttons/play_b.svg" id="2_n45e2"]
+[ext_resource type="Texture2D" uid="uid://r7irqgsyq21r" path="res://Assets/Buttons/play_b_pressed.svg" id="3_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="4_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="6_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://jiibwgtvetqa" path="res://Assets/Various/game_title.png" id="9_trj04"]
+[ext_resource type="Texture2D" uid="uid://bhxxmwn65rc8l" path="res://Assets/Backgrounds/MM_bg.png" id="10_84iac"]
+[ext_resource type="Texture2D" uid="uid://6wrn1yd3yhco" path="res://Assets/Food/cheese.png" id="12_vtepg"]
+[ext_resource type="Texture2D" uid="uid://dtynjk14hqjli" path="res://Assets/Food/toast.png" id="13_m3bi6"]
+[ext_resource type="Texture2D" uid="uid://dg8dujttqu7ea" path="res://Assets/Food/Tomate_1.png" id="14_wyh8j"]
+[ext_resource type="Texture2D" uid="uid://dup0kuyiu7phh" path="res://Assets/Food/Lettuce_2.png" id="15_ujyyl"]
+[ext_resource type="Script" path="res://Scripts/floating.gd" id="16_5n0dv"]
+[ext_resource type="Texture2D" uid="uid://ck6s13rbl7f7q" path="res://Assets/Various/2.png" id="16_6dk6o"]
+[ext_resource type="Texture2D" uid="uid://chvqm2ereu8r7" path="res://Assets/Various/3.png" id="17_jr6u5"]
+[ext_resource type="Texture2D" uid="uid://dnv71w4wcmacm" path="res://Assets/Various/4.png" id="18_6m47u"]
+[ext_resource type="Texture2D" uid="uid://c7unmw1757h8w" path="res://Assets/Various/6.png" id="19_84iac"]
+[ext_resource type="Texture2D" uid="uid://cxugctvcvxqhe" path="res://Assets/Various/#.png" id="20_5n0dv"]
+[ext_resource type="Texture2D" uid="uid://dm77wjlrpm48j" path="res://Assets/Various/+.png" id="21_ne6ao"]
+[ext_resource type="Texture2D" uid="uid://r1sjq23ylqdh" path="res://Assets/Various/-.png" id="22_tt8ml"]
+[ext_resource type="Texture2D" uid="uid://dr5g5b4m6k1j2" path="res://Assets/Various/planet.png" id="23_84iac"]
+[ext_resource type="Texture2D" uid="uid://bn37w1t2s2xx" path="res://Assets/Various/star 1.png" id="24_5n0dv"]
+[ext_resource type="Texture2D" uid="uid://c1xc2yhcojqcu" path="res://Assets/Various/star 2.png" id="25_ne6ao"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_ne6ao")
+
+[node name="Button_manager" type="Control" parent="."]
+z_index = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 90.0
+offset_bottom = 103.0
+
+[node name="Play" type="TextureButton" parent="Button_manager"]
+z_index = 2
+layout_mode = 0
+offset_left = 448.0
+offset_top = 591.0
+offset_right = 832.0
+offset_bottom = 695.0
+texture_normal = ExtResource("2_n45e2")
+texture_pressed = ExtResource("3_cp0ys")
+stretch_mode = 0
+
+[node name="Quit" type="TextureButton" parent="Button_manager"]
+z_index = 2
+layout_mode = 0
+offset_left = 43.0
+offset_top = 660.0
+offset_right = 119.0
+offset_bottom = 736.0
+texture_normal = ExtResource("4_cp0ys")
+texture_pressed = ExtResource("6_cp0ys")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 800.0
+mouse_filter = 2
+texture = ExtResource("10_84iac")
+metadata/_edit_lock_ = true
+
+[node name="Game_Title" type="TextureRect" parent="."]
+offset_left = 284.0
+offset_top = 14.0
+offset_right = 1022.0
+offset_bottom = 586.0
+mouse_filter = 2
+texture = ExtResource("9_trj04")
+metadata/_edit_lock_ = true
+
+[node name="Decorations" type="Node2D" parent="."]
+
+[node name="Cheese_1" type="Sprite2D" parent="Decorations"]
+position = Vector2(1160, 160)
+rotation = -0.698132
+scale = Vector2(0.140949, 0.140949)
+texture = ExtResource("12_vtepg")
+script = ExtResource("16_5n0dv")
+
+[node name="Cheese_2" type="Sprite2D" parent="Decorations"]
+position = Vector2(18, 352)
+rotation = 0.745256
+scale = Vector2(0.140949, 0.140949)
+texture = ExtResource("12_vtepg")
+script = ExtResource("16_5n0dv")
+
+[node name="Toast_1" type="Sprite2D" parent="Decorations"]
+position = Vector2(266, 498)
+rotation = -0.488692
+scale = Vector2(0.163856, 0.163856)
+texture = ExtResource("13_m3bi6")
+script = ExtResource("16_5n0dv")
+
+[node name="Toast_2" type="Sprite2D" parent="Decorations"]
+position = Vector2(927, 708)
+rotation = 0.523599
+scale = Vector2(0.129001, 0.129001)
+texture = ExtResource("13_m3bi6")
+script = ExtResource("16_5n0dv")
+
+[node name="Tomato_1" type="Sprite2D" parent="Decorations"]
+position = Vector2(246, 201)
+rotation = 0.340339
+scale = Vector2(0.103516, 0.103516)
+texture = ExtResource("14_wyh8j")
+script = ExtResource("16_5n0dv")
+
+[node name="Tomato_2" type="Sprite2D" parent="Decorations"]
+position = Vector2(944, 536)
+rotation = -0.424115
+scale = Vector2(0.105401, 0.105758)
+texture = ExtResource("14_wyh8j")
+script = ExtResource("16_5n0dv")
+
+[node name="Lettuce_1" type="Sprite2D" parent="Decorations"]
+position = Vector2(1182.38, 667.625)
+rotation = 0.340339
+scale = Vector2(-0.182, 0.182)
+texture = ExtResource("15_ujyyl")
+script = ExtResource("16_5n0dv")
+
+[node name="Lettuce_2" type="Sprite2D" parent="Decorations"]
+position = Vector2(428, 11)
+rotation = -0.84823
+scale = Vector2(0.182, 0.182)
+texture = ExtResource("15_ujyyl")
+script = ExtResource("16_5n0dv")
+
+[node name="2" type="Sprite2D" parent="Decorations"]
+position = Vector2(428, 462)
+rotation = 0.424115
+scale = Vector2(0.266058, 0.266058)
+texture = ExtResource("16_6dk6o")
+script = ExtResource("16_5n0dv")
+
+[node name="3" type="Sprite2D" parent="Decorations"]
+position = Vector2(1198, 452)
+rotation = 0.340339
+scale = Vector2(0.232233, 0.232233)
+texture = ExtResource("17_jr6u5")
+script = ExtResource("16_5n0dv")
+
+[node name="4" type="Sprite2D" parent="Decorations"]
+position = Vector2(69, 178)
+rotation = -0.595157
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("18_6m47u")
+script = ExtResource("16_5n0dv")
+
+[node name="6" type="Sprite2D" parent="Decorations"]
+position = Vector2(338, 673)
+scale = Vector2(0.342105, 0.342105)
+texture = ExtResource("19_84iac")
+script = ExtResource("16_5n0dv")
+
+[node name="#" type="Sprite2D" parent="Decorations"]
+position = Vector2(1093, 549)
+scale = Vector2(0.321429, 0.321429)
+texture = ExtResource("20_5n0dv")
+script = ExtResource("16_5n0dv")
+
+[node name="+" type="Sprite2D" parent="Decorations"]
+position = Vector2(103.567, 518.13)
+rotation = -0.254818
+scale = Vector2(0.295043, 0.295043)
+texture = ExtResource("21_ne6ao")
+script = ExtResource("16_5n0dv")
+
+[node name="-" type="Sprite2D" parent="Decorations"]
+position = Vector2(1040, 104)
+scale = Vector2(0.369565, 0.369565)
+texture = ExtResource("22_tt8ml")
+script = ExtResource("16_5n0dv")
+
+[node name="Planet" type="Sprite2D" parent="Decorations"]
+position = Vector2(832, 101)
+scale = Vector2(0.448276, 0.448276)
+texture = ExtResource("23_84iac")
+script = ExtResource("16_5n0dv")
+
+[node name="Star_1" type="Sprite2D" parent="Decorations"]
+position = Vector2(148, 364)
+scale = Vector2(0.378505, 0.378505)
+texture = ExtResource("24_5n0dv")
+script = ExtResource("16_5n0dv")
+
+[node name="Star_2" type="Sprite2D" parent="Decorations"]
+position = Vector2(588.387, 71)
+scale = Vector2(0.419355, 0.419355)
+texture = ExtResource("25_ne6ao")
+script = ExtResource("16_5n0dv")
+
+[node name="Star_3" type="Sprite2D" parent="Decorations"]
+position = Vector2(936, 224)
+rotation = -0.84823
+scale = Vector2(0.419355, 0.419355)
+texture = ExtResource("25_ne6ao")
+script = ExtResource("16_5n0dv")
+
+[node name="Star_4" type="Sprite2D" parent="Decorations"]
+position = Vector2(1096, 336)
+rotation = -1.35787
+scale = Vector2(0.341461, 0.341461)
+texture = ExtResource("25_ne6ao")
+script = ExtResource("16_5n0dv")
+
+[connection signal="pressed" from="Button_manager/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]

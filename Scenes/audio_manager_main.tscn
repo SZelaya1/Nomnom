@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0fs5fn3uxuv1"]
+
+[ext_resource type="Script" uid="uid://b4dgy0dmf460b" path="res://Scripts/audio_manager_main.gd" id="1_picdj"]
+[ext_resource type="AudioStream" uid="uid://dgkdsbel8gk7i" path="res://Assets/Audios/main_music.wav" id="1_qutoj"]
+
+[node name="AudioManagerMain" type="Node"]
+script = ExtResource("1_picdj")
+
+[node name="BackgroundMusic_Main" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_qutoj")
+volume_db = -30.0

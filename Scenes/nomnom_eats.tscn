@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=3 uid="uid://omciduk2evbh"]
+
+[ext_resource type="Script" uid="uid://cykjw0ejjdr3p" path="res://Scripts/nomnom_eats.gd" id="1_0o1n1"]
+[ext_resource type="Texture2D" uid="uid://dtuqonsnfuy0q" path="res://Assets/Backgrounds/park_bg.png" id="1_b6rj5"]
+[ext_resource type="Texture2D" uid="uid://bf1l1hdl2sblm" path="res://Assets/Various/Plate.png" id="2_0js8j"]
+[ext_resource type="PackedScene" uid="uid://b07k87rbxsl08" path="res://Scenes/monster.tscn" id="3_0mofs"]
+[ext_resource type="Texture2D" uid="uid://dpadfdc5v56r4" path="res://Assets/Monsters/shadow_1.png" id="3_tc408"]
+[ext_resource type="PackedScene" uid="uid://dpemvhf3qggfy" path="res://Scenes/sandwich.tscn" id="4_7nnng"]
+[ext_resource type="Texture2D" uid="uid://ddhdxwpxygks4" path="res://Assets/Various/DialogBubble_2.png" id="4_b6rj5"]
+[ext_resource type="FontFile" uid="uid://b47l3pc627tnt" path="res://Assets/Fonts/Bagel_Fat_One/BagelFatOne-Regular.ttf" id="7_2ebrn"]
+[ext_resource type="Texture2D" uid="uid://bgk0ut7o3ji3" path="res://Assets/Buttons/End_b.svg" id="7_y7lm3"]
+[ext_resource type="Texture2D" uid="uid://ceg2pejk47byd" path="res://Assets/Buttons/End_b_pressed.svg" id="8_2ebrn"]
+
+[node name="NomnomFeedingScene" type="Node2D"]
+script = ExtResource("1_0o1n1")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -8.0
+offset_top = -56.0
+offset_right = 1286.0
+offset_bottom = 803.0
+texture = ExtResource("1_b6rj5")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(641, 704)
+scale = Vector2(0.637303, 0.637303)
+texture = ExtResource("2_0js8j")
+
+[node name="Shadow1" type="Sprite2D" parent="."]
+position = Vector2(652, 532)
+scale = Vector2(1.36788, 1.33333)
+texture = ExtResource("3_tc408")
+
+[node name="MonsterScene" parent="." instance=ExtResource("3_0mofs")]
+position = Vector2(184, 48)
+scale = Vector2(0.6, 0.6)
+
+[node name="SandwichScene" parent="." instance=ExtResource("4_7nnng")]
+position = Vector2(456, 456)
+scale = Vector2(0.5, 0.5)
+
+[node name="Dialogue" type="Node2D" parent="."]
+visible = false
+position = Vector2(1374, 627)
+
+[node name="SpeechBubble" type="TextureRect" parent="Dialogue"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -614.0
+offset_top = -587.0
+offset_right = -302.0
+offset_bottom = -279.0
+grow_vertical = 0
+texture = ExtResource("4_b6rj5")
+expand_mode = 1
+
+[node name="DialogueLabel" type="Label" parent="Dialogue"]
+offset_left = -530.0
+offset_top = -487.0
+offset_right = -378.0
+offset_bottom = -421.0
+theme_override_colors/font_color = Color(0.0024043, 0.187155, 0.335125, 1)
+theme_override_fonts/font = ExtResource("7_2ebrn")
+theme_override_font_sizes/font_size = 45
+text = "Danke!"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+visible = false
+offset_left = 940.0
+offset_top = 668.0
+offset_right = 1216.0
+offset_bottom = 744.0
+texture_normal = ExtResource("7_y7lm3")
+texture_pressed = ExtResource("8_2ebrn")
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="MonsterScene" method="_on_end_button_pressed"]

@@ -1,0 +1,140 @@
+[gd_scene load_steps=15 format=3 uid="uid://dft4ls6o6iuls"]
+
+[ext_resource type="Script" uid="uid://dc6y2wttkl5ee" path="res://Scripts/menu.gd" id="1_wbdvm"]
+[ext_resource type="Texture2D" uid="uid://c4ehxdjv2ovsi" path="res://Image/Sandwich_1.png" id="2_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://hyfnlu2mvfjo" path="res://Assets/Backgrounds/book-bg.png" id="2_q3rjx"]
+[ext_resource type="Texture2D" uid="uid://bccrm2npfdkk8" path="res://Assets/Various/book.png" id="3_6swd7"]
+[ext_resource type="Texture2D" uid="uid://digbqxmhhjcoa" path="res://Assets/Buttons/exit_b.svg" id="3_8ph6h"]
+[ext_resource type="Texture2D" uid="uid://icp0vm0mi3k8" path="res://Assets/Buttons/exit_b_pressed.svg" id="4_5ti5v"]
+[ext_resource type="FontFile" uid="uid://b47l3pc627tnt" path="res://Assets/Fonts/Bagel_Fat_One/BagelFatOne-Regular.ttf" id="4_7qvly"]
+[ext_resource type="Texture2D" uid="uid://cdkeoeec325cj" path="res://Image/Toast_2.png" id="4_nrnbx"]
+[ext_resource type="Texture2D" uid="uid://uvctji8xtcmy" path="res://Image/Cheese.png" id="4_wbdvm"]
+[ext_resource type="Texture2D" uid="uid://5x6m1nx5i1te" path="res://Image/Lettuce_1.png" id="6_h1wq0"]
+[ext_resource type="Texture2D" uid="uid://cuasl7lev7f84" path="res://Image/Tomato.png" id="6_q3rjx"]
+[ext_resource type="FontFile" uid="uid://dvo7fxla4t821" path="res://Assets/Fonts/Coming_Soon/ComingSoon-Regular.ttf" id="10_rfqti"]
+[ext_resource type="Texture2D" uid="uid://cimp3y4ohirfl" path="res://Assets/Buttons/continue_b.svg" id="11_rfqti"]
+[ext_resource type="Texture2D" uid="uid://dcmihu6q0ptoa" path="res://Assets/Buttons/continue_pressed_b.svg" id="12_g8i7c"]
+
+[node name="MenuScene" type="Node2D"]
+script = ExtResource("1_wbdvm")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 1310.0
+offset_bottom = 856.0
+texture = ExtResource("2_q3rjx")
+
+[node name="Book" type="TextureRect" parent="."]
+offset_left = 200.0
+offset_top = 56.0
+offset_right = 1073.0
+offset_bottom = 664.0
+texture = ExtResource("3_6swd7")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="."]
+offset_left = 280.0
+offset_top = 184.0
+offset_right = 584.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0.00641812, 0.222715, 0.385026, 1)
+theme_override_fonts/font = ExtResource("4_7qvly")
+theme_override_font_sizes/font_size = 32
+text = "NomNom's Sandwich"
+
+[node name="Sandwich" type="Sprite2D" parent="."]
+position = Vector2(434, 400)
+scale = Vector2(0.52832, 0.647619)
+texture = ExtResource("2_ecwwl")
+
+[node name="Ingredients" type="Node2D" parent="."]
+position = Vector2(722, 184)
+
+[node name="Cheese" type="Sprite2D" parent="Ingredients"]
+position = Vector2(40, 112)
+scale = Vector2(0.164063, 0.164063)
+texture = ExtResource("4_wbdvm")
+
+[node name="Toast" type="Sprite2D" parent="Ingredients"]
+position = Vector2(40, 8.00001)
+scale = Vector2(0.164062, 0.164062)
+texture = ExtResource("4_nrnbx")
+
+[node name="Tomatoes" type="Sprite2D" parent="Ingredients"]
+position = Vector2(40, 216)
+scale = Vector2(0.18125, 0.18125)
+texture = ExtResource("6_q3rjx")
+
+[node name="Lettuce" type="Sprite2D" parent="Ingredients"]
+position = Vector2(40, 328)
+scale = Vector2(0.171875, 0.171875)
+texture = ExtResource("6_h1wq0")
+
+[node name="ToastLabel" type="Label" parent="Ingredients"]
+offset_left = 96.0
+offset_top = -24.0
+offset_right = 156.0
+offset_bottom = 53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_rfqti")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheeseLabel" type="Label" parent="Ingredients"]
+offset_left = 96.0
+offset_top = 84.0
+offset_right = 156.0
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_rfqti")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TomatoesLabel" type="Label" parent="Ingredients"]
+offset_left = 96.0
+offset_top = 190.0
+offset_right = 156.0
+offset_bottom = 267.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_rfqti")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LettuceLabel" type="Label" parent="Ingredients"]
+offset_left = 96.0
+offset_top = 303.0
+offset_right = 156.0
+offset_bottom = 380.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_rfqti")
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextButton" type="TextureButton" parent="."]
+offset_left = 1052.0
+offset_top = 672.0
+offset_right = 1216.0
+offset_bottom = 744.0
+texture_normal = ExtResource("11_rfqti")
+texture_pressed = ExtResource("12_g8i7c")
+stretch_mode = 0
+
+[node name="BackToSelect" type="TextureButton" parent="."]
+offset_left = 49.0
+offset_top = 679.0
+offset_right = 125.0
+offset_bottom = 755.0
+texture_normal = ExtResource("3_8ph6h")
+texture_pressed = ExtResource("4_5ti5v")
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="BackToSelect" to="." method="_on_back_to_select_pressed"]
