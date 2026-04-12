@@ -7,17 +7,17 @@ The game focuses on **counting and problem-solving** using visual feedback, anim
 
 ## Demo
 
-![Gameplay Demo](images/demo.gif)
+![Gameplay Demo](demo%20images/demo.gif)
 
 ---
 
 ## Screenshots
 
 ### Main Menu
-![Main Menu](images/menu.png)
+![Main Menu](demo%20images/menu.png)
 
 ### Game Selection
-![Choose Game](images/choose-game.png)
+![Choose Game](demo%20images/choose-game.png)
 
 ---
 
