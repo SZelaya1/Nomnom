@@ -1,7 +1,6 @@
 # 🍽️ NomNom
 
 **NomNom** is an interactive educational game designed to help 1st-grade students learn basic math through play.  
-The game focuses on **counting and problem-solving** using visual feedback, animations, and simple interactions instead of text.
 
 ---
 
