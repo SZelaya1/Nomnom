@@ -7,7 +7,7 @@ The game focuses on **counting and problem-solving** using visual feedback, anim
 
 ## Demo
 
-![Gameplay Demo](demo%20images/demo.gif)
+![Gameplay Demo](demo%20images/nomnom-demo.gif)
 
 ---
 
